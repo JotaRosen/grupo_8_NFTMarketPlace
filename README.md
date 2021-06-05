@@ -6,7 +6,7 @@
 
 
 - #### Descripción del marketplace
-	- ##### Nuestro sitio web tendrá la misión de darle a los artistas una plataforma para poder vender su arte de forma decentralizada. Conenctando directamente a los compradores con los artistas, ampliando las posibilidades para ambos.
+	- ##### Nuestro sitio web tendrá la misión de darle a los artistas una plataforma para poder vender su arte de forma descentralizada. Conenctando directamente a los compradores con los artistas, ampliando las posibilidades para ambos.
 - #### Target del marketplace
 	- ##### A priori, la idea de un marketplace de NFTs está especificamente orientada a Coleccionistas y artistas. No obstante, confíamos en que gracias a la globalización que brindará nuestro sitio web, mas personas se interiorioricen con este tipo tecnologías y encuentre la ispiración para convertirse tanto en artistas como en coleccionistas. 
 - #### Integrantes del equipo
