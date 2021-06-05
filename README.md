@@ -13,7 +13,7 @@
 	- ##### Francisco Alamino 
 		- ###### Soy ilutrador y concept artist. Me gusta diseñar mundos y llevar a cabo ideas. Lo que mas disfruto de un proyecto es el proceso.
 	- ##### Ramiro Fernandez
-		- ###### descripción de Rami jojojo
+		- ###### Crypto enthusiast, curioso y technology geek.
 	- ##### Julián Rosenfeld 
 		- ###### Estudiante de Ingeniería Electrónica, MUY bostero y un gran jugador de fútbol amateur. Soy múisco medio pelo también.
 - #### Sitios de referncias
