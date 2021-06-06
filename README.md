@@ -4,6 +4,8 @@
 
 ![Discord](https://img.shields.io/discord/847533205200306217?label=G8%20ds%20server%20)
 
+##### Nuestro [Tablero de trello](https://trello.com/b/2HZdnLkq)
+
 
 - #### Descripción del marketplace
 	- ##### Nuestro sitio web tendrá la misión de darle a los artistas una plataforma para poder vender su arte de forma descentralizada. Conenctando directamente a los compradores con los artistas, ampliando las posibilidades para ambos.
@@ -27,4 +29,5 @@
 		- De todos los sitios que que listamos hasta ahora, ninguno tiene un proceso de login/registro, porque generalmente los marketplaces de NFTs permiten conectar un wallet (billetera de criptos) directamente al sitio web. Diferente es el caso para Nifty Gateway, en donde para poder hacer cualquier compra, uno debe estar registrado y logeado. 
 	- ##### [Crypto|NFT](https://crypto.com/nft/marketplace)
 		- Crypto tiene entre muchas sus verticales, un marketplace de NFTs. Para la mayoría de sos servicios (como exchange para margin trading, Earns, etc) crypto tiene una aplicación móvil. Pero recientemente desarrollo el sitio web del link, para comercializar NFTs. Creemos que podría ser una gran inspiración en el caso de querer llevar mas allá a nuestra apliación.
+
 
