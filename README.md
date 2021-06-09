@@ -4,30 +4,27 @@
 
 ![Discord](https://img.shields.io/discord/847533205200306217?label=G8%20ds%20server%20)
 
-##### Nuestro [Tablero de trello](https://trello.com/b/2HZdnLkq)
+##### Our [Trello Board](https://trello.com/b/2HZdnLkq)
 
 
-- #### Descripción del marketplace
-	- ##### Nuestro sitio web tendrá la misión de darle a los artistas una plataforma para poder vender su arte de forma descentralizada. Conenctando directamente a los compradores con los artistas, ampliando las posibilidades para ambos.
-- #### Target del marketplace
-	- ##### A priori, la idea de un marketplace de NFTs está especificamente orientada a Coleccionistas y artistas. No obstante, confíamos en que gracias a la globalización que brindará nuestro sitio web, mas personas se interiorioricen con este tipo tecnologías y encuentre la ispiración para convertirse tanto en artistas como en coleccionistas. 
-- #### Integrantes del equipo
+- #### Marketplace description
+	- ##### The mission of our web site will be to give every artist all over the wolrd to share their art in a decentralized online marketplace. We will build a tool that will connect arists and collectors at first hand. 
+	- ##### As we said before, of course our main target will be collectors and artists. Nevertheless, we trust in the virtue of the our web site. So we hope its extension will lead more and more people to be intrigued by this technologies and find their own motivation to become either artists or collectors 
+- #### Group Members
 	- ##### Francisco Alamino 
-		- ###### Soy ilutrador y concept artist. Me gusta diseñar mundos y llevar a cabo ideas. Lo que mas disfruto de un proyecto es el proceso.
+		- ###### I'm an ilutrador and concept artist. I like to create new worlds and develop all kinds of ideas. The best part of a project is doing it.
 	- ##### Ramiro Fernandez
-		- ###### Crypto enthusiast, curioso y technology geek.
+		- ###### Crypto enthusiast, curious & technology geek.
 	- ##### Julián Rosenfeld 
-		- ###### Estudiante de Ingeniería Electrónica, MUY bostero y un gran jugador de fútbol amateur. Soy múisco medio pelo también.
-- #### Sitios de referncias
+		- ###### Currently studing electronic engineering, HUGE FAN (almost hooligan) of Boca Juniors and a great, but amateur, football player. I'm also an average musician. 
+- #### Reference Web sites
 	- ##### [OpenSea](https://opensea.io/)
-		- Opensea es el sitio lider en compra/ventas de NFTs. Es por esta razón que lo tomamos como inspiración principal
+		- Opensea is our leading inspiration. Not only because is the most known NFT marketplace, but because it has a wonderful and very userfriendly design
 	- ##### [Rarible](https://rarible.com/)
-		- Otro de los principales sitios para transacciones de NFT. Rarible y Opensea comparten un diseño moderno, pero rarible tiene un diseño mas juvenil en nuestra opinón. Además muestra en la Homepage los top seller (mejores vendedores) en el último día o la última semana. 
+		- Another main site for NFT transactions is Rarible. Opensea and Rarible share a modern design, with the slight difference that rarible has a more juevenile design. Furthermore, it shows all the top seller of the day, week and month.
 	- ##### [Super Rare](https://superrare.co/)
-		- El diseño de SuperRare no nos pareció el mas atractivo. Pero encontramos en su sitio, una serie de blogs y editoriales que pueden ser de mucha utilidad para el usuario.
+		- We didn't like the UX of SuperRare, at least at a first impression. But, we found in their web site some blogs and an editoral that are very usefull for the final users.
 	- ##### [Nifty Gateway](https://niftygateway.com/)
-		- De todos los sitios que que listamos hasta ahora, ninguno tiene un proceso de login/registro, porque generalmente los marketplaces de NFTs permiten conectar un wallet (billetera de criptos) directamente al sitio web. Diferente es el caso para Nifty Gateway, en donde para poder hacer cualquier compra, uno debe estar registrado y logeado. 
+		- From all the web sites listed up to now, none of them have a login/register process. This due to the fact that most of NFT markteplaces let users connect their own crypto wallets to the web site. On the contrary, in order to buy or sell NFTs in Nifty Gateway, having an account is mandatory. And of course, being logged in is also a requirement. 
 	- ##### [Crypto|NFT](https://crypto.com/nft/marketplace)
-		- Crypto tiene entre muchas sus verticales, un marketplace de NFTs. Para la mayoría de sos servicios (como exchange para margin trading, Earns, etc) crypto tiene una aplicación móvil. Pero recientemente desarrollo el sitio web del link, para comercializar NFTs. Creemos que podría ser una gran inspiración en el caso de querer llevar mas allá a nuestra apliación.
-
-
+		- Crypto, among other projects, has a NFT marketplace. Most of their services (like exchanges for margin trading, Earns, etc) are developed on a mobile app. But recently they have developed a web site for NFT commercialization. We believe that Cyrpto will be a perfect inspiration if we want to take our project to next level. 
