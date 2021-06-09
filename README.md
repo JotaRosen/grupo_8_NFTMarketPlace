@@ -8,7 +8,7 @@
 
 
 - #### Marketplace description
-	- ##### The mission of our web site will be to give every artist all over the wolrd to share their art in a decentralized online marketplace. We will build a tool that will connect arists and collectors at first hand. 
+	- ##### The mission of our web site will be to give every artist all over the wolrd the possibility to share their art in a decentralized online marketplace. We will build a tool that will connect artists and collectors at first hand. 
 	- ##### As we said before, of course our main target will be collectors and artists. Nevertheless, we trust in the virtue of the our web site. So we hope its extension will lead more and more people to be intrigued by this technologies and find their own motivation to become either artists or collectors 
 - #### Group Members
 	- ##### Francisco Alamino 
