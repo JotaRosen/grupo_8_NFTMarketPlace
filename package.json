@@ -1,0 +1,23 @@
+{
+  "name": "grupo_8_nftmarketplace",
+  "version": "1.0.0",
+  "description": "NFT marketplace",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JotaRosen/grupo_8_NFTMarketPlace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JotaRosen/grupo_8_NFTMarketPlace/issues"
+  },
+  "homepage": "https://github.com/JotaRosen/grupo_8_NFTMarketPlace#readme"
+}
