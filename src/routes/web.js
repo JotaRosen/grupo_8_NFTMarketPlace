@@ -6,6 +6,7 @@ app.get("/",(req,res) => res.sendFile(path.resolve(__dirname,"../views","home.ht
 app.get("/login",(req,res) => res.sendFile(path.resolve(__dirname,"../views","login.html")));
 app.get("/register",(req,res) => res.sendFile(path.resolve(__dirname,"../views","register.html")));
 app.get("/market",(req,res) => res.sendFile(path.resolve(__dirname,"../views","market.html")));
-app.get("/megusta",(req,res) => res.sendFile(path.resolve(__dirname,"../views","home.html")));  
+app.get("/likes",(req,res) => res.sendFile(path.resolve(__dirname,"../views","likes.html")));  
+app.get("/porductDetail",(req,res) => res.sendFile(path.resolve(__dirname,"../views","productDetail.html")));  
 
 module.exports = app;
