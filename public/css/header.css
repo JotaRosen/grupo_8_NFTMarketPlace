@@ -10,66 +10,67 @@ PALETA DE COLORES
 
 */
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 html {
-    font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    position: fixed;
-    height: 8vh;
-    background-color: white;
-    color: #6D07E6;
-    width: 100%;
-    justify-content: space-around;
-    align-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;}
-
-img#navbar_logo{
-    height: 5.5vh;
-    width: auto;
-    align-self: center;
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: fixed;
+  height: 8vh;
+  background-color: white;
+  color: #6d07e6;
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+  z-index: 1;
 }
 
-nav#navbar_searchbar{
-    align-self: center;
-    display: flex;
-    align-content: center;
-    font-size: 0.8em;
-    height: 60%;
-    border-radius: 5%;
-    padding: 0.2em;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
-
-input#search{
-    border: none;
-    height: 1em;
-    align-self: center;
-    width: 30vw;
+img#navbar_logo {
+  height: 5.5vh;
+  width: auto;
+  align-self: center;
 }
 
-nav#navbar_searchbar i{
-    padding-left: 0.5em;
-    align-self: center;
-
+nav#navbar_searchbar {
+  align-self: center;
+  display: flex;
+  align-content: center;
+  font-size: 0.8em;
+  height: 60%;
+  border-radius: 5%;
+  padding: 0.2em;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-nav#menu{
-    align-self: center;
-    font-size: 1em;
-    margin: 0px 0.5em 0px 0.5em;
+input#search {
+  border: none;
+  height: 1em;
+  align-self: center;
+  width: 30vw;
 }
 
-nav#menu a{
-    color: inherit;
-    text-decoration: none;
-    padding: 0.1em;
+nav#navbar_searchbar i {
+  padding-left: 0.5em;
+  align-self: center;
+}
+
+nav#menu {
+  align-self: center;
+  font-size: 1em;
+  margin: 0px 0.5em 0px 0.5em;
+}
+
+nav#menu a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.1em;
 }
