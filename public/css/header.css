@@ -18,7 +18,6 @@ PALETA DE COLORES
 html {
   font-family: "Roboto";
 }
-
 header {
   display: flex;
   flex-wrap: wrap;
@@ -32,8 +31,8 @@ header {
   align-content: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
   z-index: 1;
-}
-
+  }
+   
 img#navbar_logo {
   height: 5.5vh;
   width: auto;

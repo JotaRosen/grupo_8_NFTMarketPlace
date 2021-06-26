@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Market place</title>
+        <link rel="stylesheet" href="../../public/css/fonts.css">
+        <link rel="stylesheet" href="../../public/css/header.css">
+        <link rel="stylesheet" href="../../public/css/footer.css">
+        <link rel="stylesheet" href="../../public/css/market.css">
+
+
+        <link href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    </head>
+    <body>
+        <header>
+            <img id="navbar_logo"src="../../public/img/LOGO_DEMO.png">
+            <nav id="navbar_searchbar">
+                <input id="search" ><i class="fas fa-search"></i>
+            </nav>
+            <nav id="menu">
+                <a id="navbar_login" class="fas fa-user" href=""></a>
+                <a id="navbar_cart" class="fas fa-shopping-cart" href=""></a>
+            </nav>
+        </header>
+        <main>
+            <article class="side-bar">
+                <article class="side-bar-boxes">
+                    <h4>Price</h4>
+                    <select id = "currency-selector" >
+                        <option value="us-dolar">  United States dolar (USD)</option>
+                        <option value="ether"> Ether (ETH)</option>
+                        <option value="dai"> DAI </option>
+                    </select>
+                    <article class = 'price-filter-box'>
+                        <div class = 'input-container'>
+                            <input type="number" placeholder = 'Min'> to <input type="number" placeholder = 'Max'>
+                        </div>
+                        <button>Apply Filter</button>
+                </article>
+
+                    <article class="side-bar-boxes">
+                        <h4>Chains</h4>
+                        <ul class = 'listas'>
+                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
+                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
+                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
+                        </ul>
+                    </article>
+
+
+                    <article class="side-bar-boxes">
+                        <h4>Categories</h4>
+                        <ul class = 'listas'>
+                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
+                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
+                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
+                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
+                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
+                        </ul>
+                    </article>
+
+                </article>
+            </article>
+            <article class = 'content'>
+
+                <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+                        <div class="property-image-title">
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-2.jpg'>
+                        <div class="property-image-title">
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-2.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-2.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="#">
+                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
+                        <div class="property-image-title">
+                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                        </div>
+                      </img></a>
+                    <div class="property-description">
+                      <h5> Card Title </h5>
+                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+                    </div>
+                    <a href="#">
+                      <div class="property-social-icons">
+                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                      </div>
+                    </a>
+                  </article>
+
+
+            </article>
+                
+    
+        </main>
+        <footer>
+
+        </footer>
+
+    </body>
+</html>
