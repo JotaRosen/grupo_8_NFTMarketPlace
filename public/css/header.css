@@ -31,7 +31,9 @@ header{
     width: 100%;
     justify-content: space-around;
     align-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;}
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+    z-index: 1;
+}
 
 img#navbar_logo{
     height: 5.5vh;
