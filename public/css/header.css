@@ -67,12 +67,54 @@ nav#navbar_searchbar i{
 
 nav#menu{
     align-self: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     font-size: 1.5rem;
-    margin: 0px 0.5em 0px 0.5em;
 }
 
 nav#menu a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   color: inherit;
   text-decoration: none;
   padding: 0.1em;
+  margin: 0px 0.5rem 0px 0.5rem;
+
+}
+
+
+
+nav#accesos , nav#menu a p{
+  display: none;
+}
+
+@media (min-width: 760px){
+
+  nav#menu a p {
+    display: inline;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    color: #777777;
+  }
+}
+
+@media (min-width: 1060px){
+  nav#accesos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    font-size: 1.2rem;
+  }
+
+  nav#accesos a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: #777777;
+    margin: 0 1rem 0 1rem;
+  }
 }

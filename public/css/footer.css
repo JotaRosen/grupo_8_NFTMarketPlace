@@ -150,3 +150,25 @@ section#footer_links nav ul li{
     font-size: 1.1rem;
     margin-top: 0.3rem;
 }
+
+@media (min-width: 760px){
+    footer{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    footer section{
+        margin: 3rem;
+    }
+
+    section#footer_links{
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    section#footer_links nav{
+        width: 25%;
+        max-width: 10rem;
+    }
+}
