@@ -1,0 +1,101 @@
+
+
+/* This file feeds register.htlm with styles */
+
+
+.main-login-container{
+    display: flex;
+    width: 100%;
+    position: relative;
+    top: 10vh;
+    justify-content: center;
+}
+
+#login-box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+    padding: 2vh 5vw ;
+    align-content: center;
+    text-align: center;
+}
+
+#login-logo{ 
+  height: 9.5vh;
+  width: auto;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+
+.login-containers{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 70vw;
+    height: 42vh;
+}
+
+.login-containers p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.login-containers input{
+    height: 5vh;
+    text-align: center;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.submit-button{
+    height: 2.5vw;
+    color: white;
+    background-color: #6D07E6;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.login-help{
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+}
+.login-help a{
+    text-decoration: none;
+    font-size: 10px;
+}
+
+#password-helper{
+    font-size: 10px;
+}
+
+#stay-tunned-container{
+    width: 1rem;
+    height: 1rem;
+}
+
+#stay-tunned-text{
+    font-size: 10px;
+    margin-bottom: 4px;
+    align-self: center;
+}
+
+@media (min-width: 760px) {
+
+    article#login-box{
+        width: 40vw;
+        justify-self: flex-end;
+    }
+
+    .login-containers{
+        height: auto;
+        width: 100%;
+    }
+     .login-containers input{
+        width: 75%;
+    } 
+}

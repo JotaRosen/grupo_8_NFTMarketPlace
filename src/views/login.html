@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Market place</title>
+        <link rel="stylesheet" href="../../public/css/fonts.css">
+        <link rel="stylesheet" href="../../public/css/header.css">
+        <link rel="stylesheet" href="../../public/css/footer.css">
+        <link rel="stylesheet" href="../../public/css/login.css">
+
+
+        <link href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+    </head>
+    <body>
+        <header>
+            <img id="navbar_logo"src="../../public/img/LOGO_DEMO.png">
+            <nav id="navbar_searchbar">
+                <input id="search" ><i class="fas fa-search"></i>
+            </nav>
+            <nav id="menu">
+                <a id="navbar_login" class="fas fa-user" href=""></a>
+                <a id="navbar_cart" class="fas fa-shopping-cart" href=""></a>
+            </nav>
+        </header>
+        <main>
+            <section class = 'main-login-container'>
+                <article id = 'login-box'>
+                    <article class ='login-containers'>
+                        <img id="login-logo"src="../../public/img/LOGO_DEMO.png">
+                        <h4>Log in</h4>
+                        <p>Please login to continue</p>
+                    </article>
+                    <article class = "login-containers">
+                        <form action="/" method="POST">
+                            <input type="text" name="user" placeholder="Email Address or Username" required>
+                            <input type="password" name="pass" placeholder="Password" required>
+                            <input class = 'submit-button' type="submit" value="Enviar">
+                            <nav class = 'login-help'>
+                                <a   href="">Forgot Password?</a>
+                                <a   href="/register">Don't have an account? Sign up</a>
+                            </nav>
+                        </form>
+                    </article>
+                </article>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
