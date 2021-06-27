@@ -16,8 +16,10 @@ PALETA DE COLORES
     box-sizing: border-box;
 
 }
+
 html {
     font-family: 'Roboto';
+    font-size: 16px;
 }
 
 header{
@@ -25,13 +27,14 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
     position: fixed;
+    top: 0;
     height: 8vh;
     background-color: white;
     color: #6D07E6;
     width: 100%;
     justify-content: space-around;
     align-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;}
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;}
 
 img#navbar_logo{
     height: 5.5vh;
@@ -43,28 +46,28 @@ nav#navbar_searchbar{
     align-self: center;
     display: flex;
     align-content: center;
-    font-size: 0.8em;
+    font-size: 1.5rem;
     height: 60%;
-    border-radius: 5%;
-    padding: 0.2em;
+    border-radius: 2px;
+    padding: 0.2rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
 
 input#search{
     border: none;
-    height: 1em;
+    height: 1rem;
     align-self: center;
     width: 30vw;
 }
 
 nav#navbar_searchbar i{
-    padding-left: 0.5em;
+    padding-left: 0.5rem;
     align-self: center;
 
 }
 
 nav#menu{
     align-self: center;
-    font-size: 1em;
+    font-size: 1.5rem;
     margin: 0px 0.5em 0px 0.5em;
 }
 
