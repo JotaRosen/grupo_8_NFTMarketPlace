@@ -1,0 +1,152 @@
+footer{
+    width: 100%;
+    padding: 10vw auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #6D07E6;
+    color: white;
+    padding-top: 1rem;
+}
+
+footer section{
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+footer section h{
+    font-weight: bold;
+}
+
+section#footer_newsteller{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+section#footer_newsteller h2{
+    font-size: 1.5em;
+}
+
+section#footer_newsteller p{
+    font-size: 1em;
+}
+
+form#footer_newsteller_form{
+    padding-top: 1em;
+}
+
+form#footer_newsteller_form input{
+    border: none;
+    border-radius: 3px;
+    font-size: 1.1em;
+    padding: 0.7em;
+}
+
+form#footer_newsteller_form button{
+    
+    border: none;
+    border-radius: 3px;
+    background-color: #A193F1;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0.7em;
+}
+
+form#footer_newsteller_form button:hover{
+    background-color: #a193f196;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+section#footer_redes{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: 1em;
+    text-align: center;
+}
+
+section#footer_redes nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    height: 3rem;
+    margin-top: 0.7em;
+    
+    
+}
+
+section#footer_redes nav a{
+    flex: 1 0 auto;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #A193F1;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    margin-left: 0.3rem;
+    font-size: 2rem;
+}
+
+section#footer_redes nav a:hover{
+    background-color: #a193f196;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+section#footer_redes nav a#first{
+    margin-left: 0;
+}
+
+
+section#footer_aboutus{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+section#footer_aboutus img{
+    height: 6.5vh;
+    width: 7vw;
+
+}
+
+section#footer_links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 3rem;
+}
+
+section#footer_links nav{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+section#footer_links nav h2{
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+section#footer_links nav ul li{
+    list-style: none;
+    font-size: 1.1rem;
+    margin-top: 0.3rem;
+}
