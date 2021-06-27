@@ -10,11 +10,10 @@ PALETA DE COLORES
 
 */
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 html {
@@ -22,19 +21,21 @@ html {
     font-size: 16px;
 }
 
-header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    height: 8vh;
-    background-color: white;
-    color: #6D07E6;
-    width: 100%;
-    justify-content: space-around;
-    align-content: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  height: 8vh;
+  background-color: white;
+  color: #6d07e6;
+  width: 100%;
+  justify-content: space-around;
+  align-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 10px;
+  z-index: 1;
+  }
 
 img#navbar_logo{
     height: 5.5vh;
@@ -62,7 +63,6 @@ input#search{
 nav#navbar_searchbar i{
     padding-left: 0.5rem;
     align-self: center;
-
 }
 
 nav#menu{
@@ -71,8 +71,8 @@ nav#menu{
     margin: 0px 0.5em 0px 0.5em;
 }
 
-nav#menu a{
-    color: inherit;
-    text-decoration: none;
-    padding: 0.1em;
+nav#menu a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.1em;
 }

@@ -1,0 +1,157 @@
+main {
+  display: flex;
+  width: 70%;
+  position: relative;
+  top: 10vh;
+  left: 30vw;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6px;
+  justify-content: center;
+}
+
+body {
+  background-color: #444444;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main article {
+  display: flex;
+  border-left: 1vw;
+  margin: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h4 {
+  margin: 0px;
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+p {
+  font-size: 12px;
+}
+/* End Non-Essential  */
+
+.general-content {
+  display: block;
+  align-items: center;
+}
+
+.property-card {
+  height: 24em;
+  width: 20em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow: 7.5px 7.5px 13.5px #a193f1, -7.5px -7.5px 13.5px #a193f1;
+}
+
+.property-box {
+  display: flex;
+  align-self: center;
+  position: relative;
+  top: 30%;
+  width: 16em;
+  border-radius: 16px;
+  height: 12em;
+  background-color: #6d07e6;
+  box-shadow: 7.5px 7.5px 13.5px #a193f1, -7.5px -7.5px 13.5px #a193f1;
+}
+
+.property-box-p {
+  position: absolute;
+  left: 38%;
+  top: 3em;
+  font-size: 1em;
+  color: #ffd371;
+}
+
+.checkout-button {
+  display: inline-block;
+  position: absolute;
+  align-items: center;
+  align-self: flex-end;
+  bottom: 3em;
+  left: 33%;
+  height: 3em;
+  width: 6em;
+  text-align: center;
+  background-color: #121249;
+  color: white;
+  border-radius: 8px;
+}
+
+.text-description {
+  font-size: 1.3em;
+}
+
+.property-image {
+  height: 8em;
+  width: 20em;
+  position: Absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.property-description {
+  background-color: white;
+  height: 16em;
+  width: 20em;
+  position: absolute;
+  bottom: 0em;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+.property-social-icons {
+  font-size: 1.5em;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property-card:hover .property-description {
+  height: 0em;
+  padding: 0px 1em;
+}
+.property-card:hover .property-image {
+  height: 24em;
+}
+
+.property-card:hover {
+  background-color: blue;
+  cursor: pointer;
+}
