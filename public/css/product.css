@@ -93,6 +93,9 @@ div.welcome_text h1{
   text-align: left;
 }
 
+a{
+  text-decoration: none;
+}
 
 div#main__featured_artist {
   order: -1;
@@ -102,6 +105,7 @@ div#main__featured_artist {
   border-radius: 0.5rem;
   border: 1px solid #4444;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 10px;
+  width: 75%;
 }
 
 img#main_featured_img {
@@ -202,6 +206,10 @@ p.setup_steps_description {
   height:22em;
   margin: 0.5rem;
   
+}
+
+div#author img{
+  width: 75%;
 }
 
 .property-card
