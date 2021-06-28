@@ -166,3 +166,10 @@ p.setup_steps_description{
     text-align: center;
 }
 
+
+@media (min-width: 1060px){
+    div#faqs_conteiner{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
