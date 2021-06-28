@@ -153,7 +153,7 @@ article.setup_steps{
     background-color: rgba(255, 255, 255, 0.6);
     padding: 2rem;
     margin-bottom: 2rem;
-    max-width: 25rem;
+    max-width: 20rem;
 }
 
 p.setup_steps_title{
@@ -171,5 +171,9 @@ p.setup_steps_description{
     div#faqs_conteiner{
         flex-direction: row;
         justify-content: center;
+    }
+
+    article.setup_steps{
+        margin: 1rem;
     }
 }
