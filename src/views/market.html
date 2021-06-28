@@ -15,17 +15,29 @@
 
     </head>
     <body>
-        <header>
-            <img id="navbar_logo"src="../../public/img/LOGO_DEMO.png">
-            <nav id="navbar_searchbar">
-                <input id="search" ><i class="fas fa-search"></i>
-            </nav>
-            <nav id="menu">
-                <a id="navbar_login" class="fas fa-user" href=""></a>
-                <a id="navbar_cart" class="fas fa-shopping-cart" href=""></a>
-            </nav>
-        </header>
+      <header>
+        <a href="/"><img id="navbar_logo" src="../../public/img/LOGO_DEMO.png"></a>
+        <nav id="navbar_searchbar">
+            <input id="search" ><i class="fas fa-search"></i>
+        </nav>
+        <nav id="accesos">
+            <a href="/market">Market</a>
+            <a href="">Stats</a>
+            <a href="">FAQs</a>
+        </nav>
+        <nav id="menu">
+            <a id="navbar_login" href="/login">
+                <p>Login</p>
+                <i class="fas fa-user"></i>
+            </a>
+            <a id="navbar_cart" href="/likes">
+                <p>Cart</p>
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </nav>
+    </header>
         <main>
+          <section id ='main-market-section'>
             <article class="side-bar">
                 <article class="side-bar-boxes">
                     <h4>Price</h4>
@@ -64,11 +76,22 @@
 
                 </article>
             </article>
+
+
+            <div id = 'sort-by-select' >
+              <select>
+                <option value="" disabled selected hidden>Sort By</option>
+                <option value="price">Price</option>
+                <option value="likes">likes</option>
+                <option value="sells">Sells</option>
+                <option value="reviews">Reviews</option>
+              </select>
+            </div>
             
             <article class = 'content'>
-
+              
                 <article class="property-card">
-                    <a href="#">
+                    <a href="/productDetail">
                       <img class="property-image" src='../../public/img/nft-example-1.jpg'>
                         <div class="property-image-title">
                         </div>
@@ -84,7 +107,7 @@
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
+                    <a href="/productDetail">
                       <img class="property-image" src='../../public/img/nft-example-2.jpg'>
                         <div class="property-image-title">
                         </div>
@@ -100,7 +123,7 @@
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
+                    <a href="/productDetail">
                       <img class="property-image" src='../../public/img/nft-example-3.jpg'>
                         <div class="property-image-title">
                           <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
@@ -110,7 +133,7 @@
                       <h5> Card Title </h5>
                       <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
                     </div>
-                    <a href="#">
+                    <a href="/productDetail">
                       <div class="property-social-icons">
                         <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
                       </div>
@@ -282,12 +305,10 @@
 
 
             </article>
+          </section>
                 
     
         </main>
-        <footer>
-
-        </footer>
 
     </body>
 </html>

@@ -16,16 +16,29 @@
   </head>
   <body>
     <header>
-      <img id="navbar_logo" src="../../public/img/LOGO_DEMO.png" />
+      <a href="/"><img id="navbar_logo" src="../../public/img/LOGO_DEMO.png"></a>
       <nav id="navbar_searchbar">
-        <input id="search" /><i class="fas fa-search"></i>
+          <input id="search" ><i class="fas fa-search"></i>
+      </nav>
+      <nav id="accesos">
+          <a href="/market">Market</a>
+          <a href="">Stats</a>
+          <a href="">FAQs</a>
       </nav>
       <nav id="menu">
-        <a id="navbar_login" class="fas fa-user" href=""></a>
-        <a id="navbar_cart" class="fas fa-shopping-cart" href=""></a>
+          <a id="navbar_login" href="/login">
+              <p>Login</p>
+              <i class="fas fa-user"></i>
+          </a>
+          <a id="navbar_cart" href="/likes">
+              <p>Cart</p>
+              <i class="fas fa-shopping-cart"></i>
+          </a>
       </nav>
-    </header>
+  </header>
     <main>
+      <section id = 'main-product-section'>
+
       <section id="main_banner">
         <div id="main_banner_featured">
           <div class="welcome_text">
@@ -50,9 +63,9 @@
             <h1>EL FUTURO, AHORA.</h1>
             <p>Se parte de la nueva generacion de artistas digitales</p>
             <a class="main_banner_button" id="main_banner_to_market"
-              >Explorar</a
+              >Checkout Now</a
             >
-            <a class="main_banner_button" id="main_banner_to_create">Crear</a>
+            <a class="main_banner_button" id="main_banner_to_create">Add to likes</a>
           </div>
           <div id="author">
             <img src="../../public/img/user.png" />
@@ -62,11 +75,112 @@
         </div>
       </section>
       <section id="artist_jobs">
-        <img src="../../public/img/nft-example-1.jpg" />
-        <img src="../../public/img/nft-example-2.jpg" />
-        <img src="../../public/img/nft-example-3.jpg" />
-        <img src="../../public/img/nft-example-3.jpg" />
+
+        <p>Other jobs from this artist</p>
+
+        <article class="property-card">
+          <a href="/productDetail">
+            <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+              <div class="property-image-title">
+              </div>
+            </img></a>
+          <div class="property-description">
+            <h5> Card Title </h5>
+            <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+          </div>
+          <a href="#">
+            <div class="property-social-icons">
+            </div>
+          </a>
+        </article>
+
+        <article class="property-card">
+          <a href="/productDetail">
+            <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+              <div class="property-image-title">
+              </div>
+            </img></a>
+          <div class="property-description">
+            <h5> Card Title </h5>
+            <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+          </div>
+          <a href="#">
+            <div class="property-social-icons">
+            </div>
+          </a>
+        </article>
+
+        <article class="property-card">
+          <a href="/productDetail">
+            <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+              <div class="property-image-title">
+              </div>
+            </img></a>
+          <div class="property-description">
+            <h5> Card Title </h5>
+            <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+          </div>
+          <a href="/productDetail">
+            <div class="property-social-icons">
+            </div>
+          </a>
+        </article>
+
+        <article class="property-card">
+          <a href="/productDetail">
+            <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+              <div class="property-image-title">
+              </div>
+            </img></a>
+          <div class="property-description">
+            <h5> Card Title </h5>
+            <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+          </div>
+          <a href="#">
+            <div class="property-social-icons">
+            </div>
+          </a>
+        </article>
+
+        <article class="property-card">
+          <a href="/productDetail">
+            <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+              <div class="property-image-title">
+              </div>
+            </img></a>
+          <div class="property-description">
+            <h5> Card Title </h5>
+            <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+          </div>
+          <a href="#">
+            <div class="property-social-icons">
+            </div>
+          </a>
+        </article>
+
+
+        <article class="property-card">
+          <a href="/productDetail">
+            <img class="property-image" src='../../public/img/nft-example-1.jpg'>
+              <div class="property-image-title">
+              </div>
+            </img></a>
+          <div class="property-description">
+            <h5> Card Title </h5>
+            <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
+          </div>
+          <a href="#">
+            <div class="property-social-icons">
+            </div>
+          </a>
+        </article>
+        
+        
+        
+        
       </section>
+
+    </section>
     </main>
     <footer>
       <section id="footer_newsteller">

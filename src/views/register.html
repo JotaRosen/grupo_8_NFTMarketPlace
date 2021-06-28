@@ -16,13 +16,24 @@
     </head>
     <body>
         <header>
-            <img id="navbar_logo"src="../../public/img/LOGO_DEMO.png">
+            <a href="/"><img id="navbar_logo" src="../../public/img/LOGO_DEMO.png"></a>
             <nav id="navbar_searchbar">
                 <input id="search" ><i class="fas fa-search"></i>
             </nav>
+            <nav id="accesos">
+                <a href="/market">Market</a>
+                <a href="">Stats</a>
+                <a href="">FAQs</a>
+            </nav>
             <nav id="menu">
-                <a id="navbar_login" class="fas fa-user" href=""></a>
-                <a id="navbar_cart" class="fas fa-shopping-cart" href=""></a>
+                <a id="navbar_login" href="/login">
+                    <p>Login</p>
+                    <i class="fas fa-user"></i>
+                </a>
+                <a id="navbar_cart" href="/likes">
+                    <p>Cart</p>
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
             </nav>
         </header>
         <main>
@@ -54,7 +65,5 @@
                 </article>
             </section>
         </main>
-        <footer>
-        </footer>
     </body>
 </html>

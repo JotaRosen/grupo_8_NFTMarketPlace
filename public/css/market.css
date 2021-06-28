@@ -1,38 +1,48 @@
-main{
-    display: flex;
-    width: 70%;
-    position: relative;
-    top: 10vh;
-    left: 30vw;
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
+main{
+  margin-top: 8vh;
+}
+
+
+#main-market-section{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  top: 10vh;
+  width: 100%;
+  align-content: center;
+}
 /*Side bar not collapsible yet. Will be with js events functions
-In side de side-bar will be some drill downs, again not collapsible. 
+Inside the side-bar will be some drill downs, again not collapsible. 
 In order to collaps pretty much anything, we need to handle an "on click " event
 with js running o the front-end */
 
 
 .side-bar{
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     flex-direction: column;
+    align-content: center;
     width: 20%;
     height: 92vh;
     position: fixed;
-    top: 7vh;
-    left: 0px;
+    top: 8vh;
+    left: 2px;
     background-color: white;
     justify-self: center;
-    justify-content:flex-start;
-
-
+    border: solid;
 }
 
 
 .side-bar-boxes{
     display: flex;
     flex-wrap: wrap;
-    width: 12em;
     height: 8em;
     margin: 2em;
 }
@@ -97,28 +107,26 @@ textarea:focus, input:focus{
 #currency-selector{
     height: 4vh;
     margin: 0.5em;
+    width: 90%;
 }
 
 
 .content{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     padding: 6px;
+    align-self: center;
+    align-content: center;
     justify-content: center;
 }
 
-body{
-  background-color:#444444;
-  font-family: 'RobotoDraft', 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
 
-
-main article{
-    display: flex;
-    border-left: 1vw;
-    margin: 10px;
-
+#sort-by-select{
+  display: flex;
+  height: 2.5rem;
+  width: 12rem;
+  align-self: flex-end;
 }
 
 *
@@ -144,6 +152,7 @@ p
 {
   height:18em;
   width:14em;
+  margin: 1rem;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -217,7 +226,6 @@ p
 .property-card:hover .property-image
 {
   height: 18em;
-  
 }   
 
 .property-card:hover .property-social-icons
@@ -232,3 +240,21 @@ p
 }
 
 
+@media (min-width: 760px) {
+
+
+  #sort-by-select{
+    position: relative;
+    right: 0vw;
+  }
+  .content{
+    width: 70%;
+    position: relative;
+    left: 10vw;
+  }
+
+  .side-bar{
+    display: flex;
+  }
+
+}
