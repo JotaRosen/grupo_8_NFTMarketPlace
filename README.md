@@ -5,6 +5,7 @@
 ![Discord](https://img.shields.io/discord/847533205200306217?label=G8%20ds%20server%20)
 
 ##### Our [Trello Board](https://trello.com/b/2HZdnLkq)
+##### Our [Heroku app](https://nft-marketplace-dh.herokuapp.com/)
 
 
 - #### Marketplace description
