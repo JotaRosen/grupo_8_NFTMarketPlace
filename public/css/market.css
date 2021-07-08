@@ -38,8 +38,13 @@ section#side_filter{
 }
 
 section#side_filter h2{
+  color: #6D07E6;
+
   padding: 1rem;
   align-self: flex-start;
+}
+section#side_filter h2 i{
+  margin-right: 0.5rem;
 }
 
 div.filter_parameter{
@@ -62,6 +67,7 @@ div.filter_parameter h3{
   flex-direction: row;
   flex-wrap: wrap;
   justify-self: center;
+  justify-content: center;
 
 }
 
@@ -72,7 +78,7 @@ div.filter_parameter h3{
   border-radius: 3px;
 }
 
-#min-max_price form input:focus{
+input[type="text"]:focus{
   border: 1px solid #6D07E6;
 }
 
@@ -116,27 +122,35 @@ div.checkbox_filter{
   margin-bottom: 1rem;
 }
 
+
 .checkbox_filter form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
+    justify-items: center;
 }
 
-label.checkbox_option{
-  width: 100%;
-  align-self: flex-start;
-  margin: 0.2rem;
+.checkbox_option{
+  width: 95%;
+  justify-self: center;
+  margin: 0.3rem;
   font-size: 1rem;
   color: #777777;
 }
 
-.checkbox_filter form label input{
-opacity: 50%;
+.checkbox_option:hover{
+  cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label.checkbox_option{
-  color: #A193F1;
+
+.checkbox_filter form input{
+display: none;
+}
+
+input[type="checkbox"]:checked + label{
+  color: #6D07E6;
+  font-weight: bold;
 }
 
 #market_content{
