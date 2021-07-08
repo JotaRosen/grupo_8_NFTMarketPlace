@@ -1,3 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
   overflow-x: hidden;
@@ -13,140 +19,135 @@ main{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  position: relative;
-  top: 10vh;
+  margin-top: 8vh;
   width: 100%;
-  align-content: center;
-}
-/*Side bar not collapsible yet. Will be with js events functions
-Inside the side-bar will be some drill downs, again not collapsible. 
-In order to collaps pretty much anything, we need to handle an "on click " event
-with js running o the front-end */
-
-
-.side-bar{
-    display: none;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    width: 20%;
-    height: 92vh;
-    position: fixed;
-    top: 8vh;
-    left: 2px;
-    background-color: white;
-    justify-self: center;
-    border: solid;
 }
 
-
-.side-bar-boxes{
-    display: flex;
-    flex-wrap: wrap;
-    height: 8em;
-    margin: 2em;
+section#side_filter{
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
+  align-self: flex-start;
+  position: fixed;
+  align-items: center;
+  left: 0;
+  border-right: 1px solid #b6b6b6;
+  height: 100vh;
+  user-select: none;
 }
 
-.listas{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 1em 1em 1em 0em;
-    justify-self: center;
-    justify-content:left;
+section#side_filter h2{
+  padding: 1rem;
+  align-self: flex-start;
 }
 
-.listas button{
-    margin: 4px;
-    background-color: #121249;
-    color: white;
-}
-
-.price-filter-box{
-    display: flex;
-    flex-wrap: wrap;
-    height: 5vh;
-
-}
-
-.input-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:stretch;
-    align-items: center;
-    align-self: center;
-    margin-bottom: 1em;
-}
-
-.price-filter-box input{
-    width: 5vw;
-    border-radius: 16px;
-    text-align: center;
-
-}
-
-textarea:focus, input:focus{
-    outline: none;
-}
-
-.price-filter-box button{
-    display: flex;
-    flex-wrap: wrap;
-    height: 2em;
-    position: absolute;
-    border-radius: 4px;
-    margin: 2em;
-    background-color: #121249;
-    color: white;
-    justify-self: center;
-
-    
-
-}
-
-#currency-selector{
-    height: 4vh;
-    margin: 0.5em;
-    width: 90%;
-}
-
-
-.content{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 6px;
-    align-self: center;
-    align-content: center;
-    justify-content: center;
-}
-
-
-#sort-by-select{
+div.filter_parameter{
+  width: 100%;
   display: flex;
-  height: 2.5rem;
-  width: 12rem;
-  align-self: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  border-top: 1px solid #b6b6b6;;
 }
 
-*
-{
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+
+div.filter_parameter h3{
+  color: #6D07E6;
+  margin-bottom: 1rem;
 }
 
-h5
-{
-  margin:0px;
-  font-size:1.4em;
-  font-weight:700;
+#min-max_price form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-self: center;
+
 }
 
-p
-{
-  font-size:12px;
+#min-max_price form input{
+  width: 40%;
+  border: 1px solid #b6b6b6;
+  padding: 0.8rem;
+  border-radius: 3px;
 }
-/* End Non-Essential  */
+
+#min-max_price form input:focus{
+  border: 1px solid #6D07E6;
+}
+
+#min-max_price form p{
+  text-align: center;
+  align-self: center;
+  width: 15%;
+  color: #b6b6b6;
+}
+
+#min-max_price form button{
+  width: 40%;
+  align-self: center;  
+  border: none;
+  border-radius: 3px;
+  background-color: #A193F1;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0.8rem;
+  margin-top: 1rem;
+}
+
+#min-max_price form button:hover{
+  background-color: #a193f196;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+div.checkbox_filter{
+  width: 100%;
+  display: flex;
+  flex-direction: column;    
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.5rem;
+  border-top: 1px solid #b6b6b6;;
+}
+
+
+.checkbox_filter h3{
+  color: #6D07E6;
+  margin-bottom: 1rem;
+}
+
+.checkbox_filter form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+label.checkbox_option{
+  width: 100%;
+  align-self: flex-start;
+  margin: 0.2rem;
+  font-size: 1rem;
+  color: #777777;
+}
+
+.checkbox_filter form label input{
+opacity: 50%;
+}
+
+input[type="checkbox"]:checked + label.checkbox_option{
+  color: #A193F1;
+}
+
+#market_content{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 6px;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+}
 
 .property-card
 {
@@ -175,14 +176,10 @@ p
 
 .property-image
 { 
-  height:6em;
-  width:14em;
+  height:60%;
   position:Absolute;
   top:0px;
   left:0px;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* Bottom Card Section */
@@ -190,15 +187,25 @@ p
 .property-description
 {
   background-color: white;
-  height:12em;
+  height:40%;
   width:16em;
   position:absolute;
   bottom:0em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding: 0.5em 1em;
   text-align:left;
+}
+
+.property-description h5{
+  margin:0px;
+  font-size:1rem;
+  font-weight:bold;
+}
+
+.property-description p{
+  font-size:0.8rem;
+  max-width: 100%;
+  text-overflow: ellipsis;
+
 }
 
 /* Social Icons */
@@ -218,16 +225,6 @@ p
 
 /* Property Cards Hover States */
 
-.property-card:hover .property-description
-{
-  height:0em;
-  padding:0px 1em;
-}
-.property-card:hover .property-image
-{
-  height: 18em;
-}   
-
 .property-card:hover .property-social-icons
 {
   background-color:white;
@@ -239,22 +236,23 @@ p
   cursor:pointer;
 }
 
+@media (min-width: 380px){
+
+}
 
 @media (min-width: 760px) {
 
+  section#side_filter{
+    display: flex;
+  }
 
   #sort-by-select{
     position: relative;
     right: 0vw;
   }
-  .content{
-    width: 70%;
-    position: relative;
+  #market_content{
+    width: 75%;
     left: 10vw;
+    align-self: flex-end;
   }
-
-  .side-bar{
-    display: flex;
-  }
-
 }
