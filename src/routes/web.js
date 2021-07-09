@@ -20,5 +20,8 @@ app.get("/likes", (req, res) =>
 app.get("/productDetail", (req, res) =>
   res.sendFile(path.resolve(__dirname, "../views", "productDetail.html"))
 );
+app.get("/resetPass", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "../views", "resetPassword.html"))
+);
 
 module.exports = app;
