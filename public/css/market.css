@@ -39,7 +39,6 @@ section#side_filter{
 
 section#side_filter h2{
   color: #6D07E6;
-
   padding: 1rem;
   align-self: flex-start;
 }
@@ -103,7 +102,7 @@ input[type="text"]:focus{
 }
 
 #min-max_price form button:hover{
-  background-color: #a193f196;
+  background-color: #6D07E6;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 div.checkbox_filter{
@@ -135,7 +134,7 @@ div.checkbox_filter{
   width: 95%;
   justify-self: center;
   margin: 0.3rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #777777;
 }
 
@@ -143,6 +142,10 @@ div.checkbox_filter{
   cursor: pointer;
 }
 
+.checkbox_option i{
+  margin-right: 0.5rem;
+  color: #A193F1;
+}
 
 .checkbox_filter form input{
 display: none;
@@ -156,7 +159,7 @@ input[type="checkbox"]:checked + label{
 #market_content{
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 70%;
   padding: 6px;
   align-self: center;
   align-content: center;
@@ -165,81 +168,97 @@ input[type="checkbox"]:checked + label{
 
 .property-card
 {
-  height:18em;
-  width:14em;
-  margin: 1rem;
-  display:-webkit-box;
-  display:-ms-flexbox;
+  height:22em;
+  width:15em;
+  margin: 0.6rem;
   display:flex;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -ms-flex-direction:column;
   flex-direction:column;
-  position:relative;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 10px;
+  border-radius:0.3rem;
+  border: 1px solid #c3c3c3;
+}
+.property-card:hover{
+  box-shadow: #7e42c74d 0px 0px 10px;
 
 }
-/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
-
-/* Top Half of card, image. */
-
-.property-image
-{ 
-  height:60%;
-  position:Absolute;
-  top:0px;
-  left:0px;
+.property-card a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
-/* Bottom Card Section */
+.property-image{ 
+  display: flex;
+  height:14rem;
+  width: 13.5rem;
+  border-radius:0.4rem;
+  max-width: 100%;
+  overflow: hidden;
 
-.property-description
-{
+}
+
+.property-image img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+}
+
+/*Card Section */
+
+.property-description{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
   background-color: white;
-  height:40%;
-  width:16em;
-  position:absolute;
+  height:5rem;
   bottom:0em;
-  padding: 0.5em 1em;
-  text-align:left;
+  padding: 1rem;
 }
 
+.piece-description{
+  width: 60%;
+  justify-self: flex-start;
+}
+
+.piece-price{
+  width: 40%;
+  justify-self: flex-end;
+  text-align: end;
+}
+
+.price-changer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price-changer i{
+  margin-right: 0.2rem;
+  color: #A193F1;
+}
 .property-description h5{
   margin:0px;
-  font-size:1rem;
+  font-size:0.85rem;
   font-weight:bold;
+  color: #6D07E6;
 }
 
 .property-description p{
-  font-size:0.8rem;
+  font-size:0.85rem;
   max-width: 100%;
   text-overflow: ellipsis;
-
-}
-
-/* Social Icons */
-
-.property-social-icons
-{
-  width:1em;
-  height:1em;
-  background-color:black;
-  position:absolute;
-  bottom:1em;
-  left:1em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: black;
 }
 
 /* Property Cards Hover States */
 
-.property-card:hover .property-social-icons
+/* .property-card:hover .property-social-icons
 {
   background-color:white;
 }
@@ -248,7 +267,7 @@ input[type="checkbox"]:checked + label{
 {
   background-color:blue;
   cursor:pointer;
-}
+} */
 
 @media (min-width: 380px){
 
