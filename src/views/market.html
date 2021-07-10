@@ -37,275 +37,382 @@
         </nav>
     </header>
         <main>
-          <section id ='main-market-section'>
-            <article class="side-bar">
-                <article class="side-bar-boxes">
-                    <h4>Price</h4>
-                    <select id = "currency-selector" >
-                        <option value="us-dolar">  United States dolar (USD)</option>
-                        <option value="ether"> Ether (ETH)</option>
-                        <option value="dai"> DAI </option>
-                    </select>
-                    <article class = 'price-filter-box'>
-                        <div class = 'input-container'>
-                            <input type="number" placeholder = 'Min'> to <input type="number" placeholder = 'Max'>
-                        </div>
-                        <button>Apply Filter</button>
-                </article>
+          <div id ='main-market-section'>
 
-                    <article class="side-bar-boxes">
-                        <h4>Chains</h4>
-                        <ul class = 'listas'>
-                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
-                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
-                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
-                        </ul>
-                    </article>
+            <section id="side_filter">
+              <h2><i class="fas fa-layer-group"></i>Filter</h2>
+              <div class="filter_parameter" id="min-max_price">
+                <h3>Price (USD)</h3><!-- <i class="fas fa-chevron-up"></i> -->
+                <form>
+                  <input type="text" placeholder="Min. price" id="min-price">
+                  <p>to</p>
+                  <input type="text" placeholder="Max. price">
+                  <button type="submit">Apply</button>
+                </form>
+              </div>
+              <div class="checkbox_filter" id="category_filter">
+                <h3>Category</h3>
+                <form>
+                  <input id="checkbox_option1" type="checkbox" name="category" value="category1"><label for="checkbox_option1" class="checkbox_option">Category1</label>
+                  <input id="checkbox_option2" type="checkbox" name="category" value="category2"><label for="checkbox_option2" class="checkbox_option">Category2</label>
+                  <input id="checkbox_option3" type="checkbox" name="category" value="category3"><label for="checkbox_option3" class="checkbox_option">Category3</label>
+                  <input id="checkbox_option4" type="checkbox" name="category" value="category4"><label for="checkbox_option4" class="checkbox_option">Category4</label>
+                </form>
+              </div>
+              <div class="checkbox_filter" id="chain_filter">
+                <h3>Chain</h3>
+                <form>
+                  <input id="checkbox_option5" type="checkbox" name="chain" value="chain1"><label for="checkbox_option5" class="checkbox_option"><i class="fab fa-ethereum"></i>Chain1</label>
+                  <input id="checkbox_option6" type="checkbox" name="chain" value="chain2"><label for="checkbox_option6" class="checkbox_option"><i class="fab fa-ethereum"></i>Chain2</label>
+                  <input id="checkbox_option7" type="checkbox" name="chain" value="chain3"><label for="checkbox_option7" class="checkbox_option"><i class="fab fa-ethereum"></i>Chain3</label>
+                  <input id="checkbox_option8" type="checkbox" name="chain" value="chain4"><label for="checkbox_option8" class="checkbox_option"><i class="fab fa-ethereum"></i>Chain4</label>
+                </form>
+              </div>
+            </section>
 
+            <section id ="market_content">
 
-                    <article class="side-bar-boxes">
-                        <h4>Categories</h4>
-                        <ul class = 'listas'>
-                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
-                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
-                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
-                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
-                            <button> <i class="fab fa-ethereum"></i> Ethereum </button>
-                        </ul>
-                    </article>
-
-                </article>
-            </article>
-
-
-            <div id = 'sort-by-select' >
-              <select>
-                <option value="" disabled selected hidden>Sort By</option>
-                <option value="price">Price</option>
-                <option value="likes">likes</option>
-                <option value="sells">Sells</option>
-                <option value="reviews">Reviews</option>
-              </select>
-            </div>
-            
-            <article class = 'content'>
-              
-                <article class="property-card">
+                  <article class="property-card">
                     <a href="/productDetail">
-                      <img class="property-image" src='../../public/img/nft-example-1.jpg'>
-                        <div class="property-image-title">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
                     <a href="/productDetail">
-                      <img class="property-image" src='../../public/img/nft-example-2.jpg'>
-                        <div class="property-image-title">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                  
+                  <article class="property-card">
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
+                        </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
                     <a href="/productDetail">
-                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
                     <a href="/productDetail">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
-                      </div>
-                    </a>
-                  </article>
-
-
-                  <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-1.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-2.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-1.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-2.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                  
+                  <article class="property-card">
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
+                        </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
                   <article class="property-card">
-                    <a href="#">
-                      <img class="property-image" src='../../public/img/nft-example-3.jpg'>
-                        <div class="property-image-title">
-                          <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. -->
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
                         </div>
-                      </img></a>
-                    <div class="property-description">
-                      <h5> Card Title </h5>
-                      <p>Lorem Ipsum Dipsum hortata. Mixcall Horcho. Mixwell Chingo. More Bingo. Lorem Ipum doth be hard.</p>
-                    </div>
-                    <a href="#">
-                      <div class="property-social-icons">
-                        <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
                       </div>
                     </a>
                   </article>
 
+                  <article class="property-card">
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
+                        </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
 
-            </article>
-          </section>
+                  <article class="property-card">
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
+                        </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
+                        </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
+                        </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
+                        </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+
+                  <article class="property-card">
+                    <a href="/productDetail">
+                      <div class="property-image">
+                        <img  src='../../public/img/nft-example-2.jpg'></div>
+                      <div class="property-description">
+                        <div class="piece-description">
+                          <h5>Author</h5>
+                          <p>Piece name</p>
+                        </div>
+                        <div class="piece-price">
+                          <h5>Price</h5>
+                          <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+            </section>
+          </div>
                 
     
         </main>
