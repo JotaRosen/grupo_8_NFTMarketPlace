@@ -208,61 +208,104 @@ p.setup_steps_description {
   
 }
 
+
+
 div#author img{
   width: 75%;
 }
 
-.property-card
-{
-  height:18em;
-  width:14em;
-  margin: 0.3rem;
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:inline-block;
-  -webkit-box-orient:vertical;
-  -webkit-box-direction:normal;
-  -ms-flex-direction:column;
-  flex-direction:column;
-  position:relative;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 10px;
-
-}
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
 /* Top Half of card, image. */
 
-.property-image
-{ 
-  height:6em;
-  width:14em;
-  position:Absolute;
-  top:0px;
-  left:0px;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+.property-card
+{
+  height:22em;
+  width:15em;
+  margin: 0.6rem;
+  display:flex;
+  flex-direction:column;
+  border-radius:0.3rem;
+  border: 1px solid #c3c3c3;
+}
+.property-card:hover{
+  box-shadow: #7e42c74d 0px 0px 10px;
+
+}
+.property-card a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.property-image{ 
+  display: flex;
+  height:14rem;
+  width: 13.5rem;
+  border-radius:0.4rem;
+  max-width: 100%;
+  overflow: hidden;
+
+}
+
+.property-image img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
 }
 
 /* Bottom Card Section */
 
-.property-description
-{
+.property-description{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
   background-color: white;
-  height:12em;
-  width:16em;
-  position:absolute;
+  height:5rem;
   bottom:0em;
-  -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding: 0.5em 1em;
-  text-align:left;
+  padding: 1rem;
+}
+
+.piece-description{
+  width: 60%;
+  justify-self: flex-start;
+}
+
+.piece-price{
+  width: 40%;
+  justify-self: flex-end;
+  text-align: end;
+}
+
+.price-changer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price-changer i{
+  margin-right: 0.2rem;
+  color: #A193F1;
+}
+.property-description h5{
+  margin:0px;
+  font-size:0.85rem;
+  font-weight:bold;
+  color: #6D07E6;
+}
+
+.property-description p{
+  font-size:0.85rem;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  color: black;
 }
 
 /* Social Icons */
@@ -282,26 +325,9 @@ div#author img{
 
 /* Property Cards Hover States */
 
-.property-card:hover .property-description
-{
-  height:0em;
-  padding:0px 1em;
-}
-.property-card:hover .property-image
-{
-  height: 18em;
-}   
 
-.property-card:hover .property-social-icons
-{
-  background-color:white;
-}
 
-.property-card:hover .property-social-icons:hover
-{
-  background-color:blue;
-  cursor:pointer;
-}
+
 
 
 img#author {
@@ -318,6 +344,15 @@ img#author {
   align-content: center;
   width: 90%;
   text-align: left;
+  white-space: nowrap;
+}
+#artist_jobs_title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #6d07e6;
+  font-weight: bold;
+  width: 100%;
 }
 @media (min-width: 760px) {
   section#main_banner {
@@ -333,7 +368,10 @@ img#author {
   #artist_jobs {
     width: 60%;
     align-self: center;
+    align-content: flex-start;
   }
+
+  
 
   #price_and_author_conteiner {
     width: 60%;

@@ -1,0 +1,251 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+  }
+  
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+main{
+    margin-top: 8vh;
+}
+#profile_header{
+    padding: 1rem;
+    border-bottom: 1px solid #d4d4d4;
+
+}
+#profile_header h1{
+    font-size: 2rem;
+}
+
+#profile_tittle{
+   color: #444444;
+   margin: 0.5rem 0.5rem;
+}
+#profile_menu{
+    max-width: 100vw;
+}
+#profile_menu_links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
+
+#profile_menu_links li{
+    margin: 0.5rem;
+}
+
+#profile_menu_links li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #6D07E6;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+#profile_menu_links li a p{
+    color: #777777;
+}
+
+#profile_menu_links li a i{
+    color: #6D07E6;
+    font-size: 1.1rem;
+}
+
+/* Nav hovers and active  */
+
+#profile_menu_links li a:hover {
+    background-color: #A193F1;
+    border: 1px solid transparent;
+}
+
+#profile_menu_links li a:hover p{
+    color: white;
+}
+
+#profile_menu_links li a:hover i{
+    color: white;
+}
+
+#profile_menu_links li a#current{
+    background-color: #6D07E6;
+    pointer-events: none;
+    color: white;
+}
+
+#profile_menu_links li a#current p{
+    color: white;
+}
+
+
+#profile_menu_links li a#current i{
+    color: white;
+}
+
+#collected_cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    margin: 1rem;
+}
+
+.property-card{
+  height:22em;
+  width:15em;
+  margin: 0.6rem;
+  display:flex;
+  flex-direction:column;
+  border-radius:0.3rem;
+  border: 1px solid #c3c3c3;
+}
+.property-card:hover{
+  box-shadow: #7e42c74d 0px 0px 10px;
+
+}
+.property-card a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.property-image{ 
+  display: flex;
+  height:14rem;
+  width: 13.5rem;
+  border-radius:0.4rem;
+  max-width: 100%;
+  overflow: hidden;
+
+}
+
+.property-image img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+}
+
+.property-description{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: white;
+  height:5rem;
+  bottom:0em;
+  padding: 1rem;
+}
+
+.piece-description{
+  width: 60%;
+  justify-self: flex-start;
+}
+
+.piece-price{
+  width: 40%;
+  justify-self: flex-end;
+  text-align: end;
+}
+
+.price-changer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price-changer i{
+  margin-right: 0.2rem;
+  color: #A193F1;
+}
+.property-description h5{
+  margin:0px;
+  font-size:0.85rem;
+  font-weight:bold;
+  color: #6D07E6;
+}
+
+.property-description p{
+  font-size:0.85rem;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+.property-card#create_card{
+    border: 1px dashed #c3c3c3;
+    
+}
+
+.property-card#create_card h4{
+    font-size: 1.2rem;
+    color: #c3c3c3;
+    font-weight: normal;
+}
+
+.property-card#create_card i{
+    margin-top: 1rem;
+    font-size: 5rem;
+    color: #c3c3c3;
+}
+
+
+#remove-icon{
+    align-self: flex-end;
+    border: solid 2px;
+    border-radius: 51%;
+    font-size: 1rem;
+    color: #A193F1; 
+    position: relative;
+    bottom: 2%;
+    left: 2%;
+}
+
+#remove-icon:hover{
+    color: #6D07E6;
+}
+
+#checkout-button{
+    justify-self: flex-end;
+    align-self: center;
+    color: white;
+    background-color: #A193F1;
+    font-weight: bold; 
+    border-radius: 3px;
+    width: 8rem;
+    height: 4.6rem;
+    position: relative;
+    top: 4%
+    
+}
+#checkout-button:hover{
+    color: white;
+    background-color: #6D07E6;
+}
+@media (min-width: 760px){
+
+    #profile_menu_links{
+        justify-content: flex-start;
+    }
+
+    #collected_cards{
+        flex-direction: row;
+    }
+
+  }

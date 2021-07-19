@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head') %>
+    <body>
+        <%- include('partials/header') %>
+        <main>
+            <section class = 'main-login-container'>
+                <video src="../../public/img/Music - 35889.mp4" autoplay loop playsinline muted></video>
+
+                <article id = 'login-box'>
+                    <article class ='login-containers'>
+                        <img id="login-logo"src="../../public/img/LOGO_DEMO.png">
+
+                        <p>Sign up for New FuTure</p>
+                    </article>
+                    <article class = "login-containers">
+                        <form action="/" method="POST">
+                            <input type="text" name="user" placeholder="Email Address*" required>
+                            <input type="text" name="user" placeholder="Confirm Email Address*" required>
+                            <input type="text" name="user" placeholder="Username*" required>
+                            <input type="text" name="user" placeholder="Your Name*" required>
+                            <input type="password" name="pass" placeholder="Password*" required>
+                            <input type="password" name="pass" placeholder="Confirm Password*" required>
+                            <p id = 'password-helper'>Password must be at least 8 characters and contain 1 number</p>
+                            <input type="checkbox" name="my-checkbox" id="stay-tunned-container">
+                            <label for="stay-tunned-container" id = 'stay-tunned-text'>Stay up to date with New FuTure</label>
+                            </label>
+                            <input class = 'submit-button' type="submit" value="Enviar">
+                            <nav class = 'login-help'>
+                                <a   href="/resetPass">Forgot Password?</a>
+                                <a   href="/login">already have an account? Sign in</a>
+                            </nav>
+                        </form>
+                    </article>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+[
+    {
+        "id": 1,
+        "image": "nft-example-1.jpg",
+        "price": 0.054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Falopa"
+    },
+    {
+        "id": 2,
+        "image": "nft-example-2.jpg",
+        "price": 0.0654,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 3,
+        "image": "nft-example-3.jpg",
+        "price": 0.6054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 4,
+        "image": "nft-example-4.jpg",
+        "price": 0.054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 5,
+        "image": "nft-example-5.png",
+        "price": 0.7054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 6,
+        "image": "nft-example-6.jpg",
+        "price": 0.034,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 7,
+        "image": "nft-example-7.png",
+        "price": 0.054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 8,
+        "image": "nft-example-8.jpg",
+        "price": 0.044,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 9,
+        "image": "nft-example-9.png",
+        "price": 0.054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },{
+        "id": 11,
+        "image": "nft-example-11.jpg",
+        "price": 0.054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 12,
+        "image": "nft-example-12.jpg",
+        "price": 0.054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    },
+    {
+        "id": 13,
+        "image": "nft-example-13.jpg",
+        "price": 0.054,
+        "author": "Author Name",
+        "authorId" : 1,
+        "pieceName": "Piece Name"
+    }
+]

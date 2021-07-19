@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+        <link rel="stylesheet" href="../../public/css/profileFavs.css">
+    <body>
+        <%- include('partials/header') %>
+
+    <main>
+        <section id="profile_header">
+          <h1 id="profile_tittle">Profile</h1>
+            <nav id="profile_menu">
+                <ul id="profile_menu_links">
+                    <li><a id="current" href="/likes"><i class="fas fa-heart"></i><p>Likes</p></a></li>
+                    <li><a href="/profile_collection"><i class="fas fa-folder"></i><p>Collection</p></a></li>
+                    <li><a href="/profile_create" href=""><i class="fas fa-file-upload"></i><p>Create</p></a></li>
+                    <li><a href=""><i class="fas fa-chart-bar"></i><p>Stats</p></a></li>
+                    <li><a href=""><i class="fas fa-cog"></i><p>Settings</p></a></li>
+                </ul>
+            </nav>
+
+        </section>
+        <section id="collected_cards">
+            <article class="property-card">
+                <a href="/productDetail">
+                <div id = 'remove-icon'>
+                    <i class="fas fa-trash"></i>
+                </div>
+                <div class="property-image">
+                    <img  src='../../public/img/nft-example-2.jpg'></div>
+                <div class="property-description">
+                    <div class="piece-description">
+                    <h5>Author</h5>
+                    <p>Piece name</p>
+                    </div>
+                    <div class="piece-price">
+                    <h5>Price</h5>
+                    <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                    </div>
+                </div>
+                <a id = 'checkout-button'>Checkout Now</a>
+                </a>
+
+            </article>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+
+</html>
