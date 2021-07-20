@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('partials/head') %>
+
+    <link rel="stylesheet" href="../../public/css/market.css">
+    <body>
+        <%- include('partials/header') %>
+        <main>
+            
+            <div id ='main-market-section'>
+
+                <section id="side_filter">
+                  <h2><i class="fas fa-layer-group"></i>Filter</h2>
+                  <div class="filter_parameter" id="min-max_price">
+                    <h3>Price (USD)</h3><!-- <i class="fas fa-chevron-up"></i> -->
+                    <form>
+                      <input type="text" placeholder="Min. price" id="min-price">
+                      <p>to</p>
+                      <input type="text" placeholder="Max. price">
+                      <button type="submit">Apply</button>
+                    </form>
+                  </div>
+                  <div class="checkbox_filter" id="category_filter">
+                    <h3>Category</h3>
+                    <form>
+                      <input id="checkbox_option1" type="checkbox" name="category" value="category1"><label for="checkbox_option1" class="checkbox_option">Category1</label>
+                      <input id="checkbox_option2" type="checkbox" name="category" value="category2"><label for="checkbox_option2" class="checkbox_option">Category2</label>
+                      <input id="checkbox_option3" type="checkbox" name="category" value="category3"><label for="checkbox_option3" class="checkbox_option">Category3</label>
+                      <input id="checkbox_option4" type="checkbox" name="category" value="category4"><label for="checkbox_option4" class="checkbox_option">Category4</label>
+                    </form>
+                  </div>
+                  <div class="checkbox_filter" id="chain_filter">
+                    <h3>Chain</h3>
+                    <form>
+                      <input id="checkbox_option5" type="checkbox" name="chain" value="chain1"><label for="checkbox_option5" class="checkbox_option"><i class="fab fa-ethereum"></i>Chain1</label>
+                      <input id="checkbox_option6" type="checkbox" name="chain" value="chain2"><label for="checkbox_option6" class="checkbox_option"><i class="fab fa-ethereum"></i>Chain2</label>
+                      <input id="checkbox_option7" type="checkbox" name="chain" value="chain3"><label for="checkbox_option7" class="checkbox_option"><i class="fab fa-ethereum"></i>Chain3</label>
+                      <input id="checkbox_option8" type="checkbox" name="chain" value="chain4"><label for="checkbox_option8" class="checkbox_option"><i class="fab fa-ethereum"></i>Chain4</label>
+                    </form>
+                  </div>
+                </section>
+    
+                <section id ="market_content">
+    
+                    <% product.forEach(product => { %>
+                        <%- include('partials/productCards', { product }) %>
+                    <% })%>
+
+                </section>
+              </div>
+
+        </main>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+        <link rel="stylesheet" href="../../public/css/profile_create.css">
+    <body>
+        <%- include('partials/header') %>
+
+    <main>
+        <section id="profile_header">
+            <h1 id="profile_tittle">Profile</h1>
+            <nav id="profile_menu">
+                <ul id="profile_menu_links">
+                    <li><a href="/profile/Favs"><i class="fas fa-heart"></i><p>Likes</p></a></li>
+                    <li><a href="/profile"><i class="fas fa-folder"></i><p>Collection</p></a></li>
+                    <li><a id="current" href=""><i class="fas fa-file-upload"></i><p>Create</p></a></li>
+                    <li><a href=""><i class="fas fa-chart-bar"></i><p>Stats</p></a></li>
+                    <li><a href=""><i class="fas fa-cog"></i><p>Settings</p></a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="create_card">
+            <h3>Create a new item</h3>
+            <form id="create_form" name="create_form" method="POST">
+                <p id="form_title">Image, video, audio or 3D model</p>
+                <label id="create_image_label" for="create_image">
+                    <i class="fas fa-image"></i>
+                    <p>Drag and drop file</p>
+                    <p id="label_line">or click to browse from your computer</p>
+                </label>
+                <input type="file"  name="create_image" id="create_image">
+                <p id="form_title">Name *</p>
+                <input type="text" required name="create_title" id="create_title" placeholder="Item name">
+                <p id="form_title">Description</p>
+                <textarea name="create_description" id="create_discription" placeholder="Describe your item (optional)"></textarea>
+                <p id="form_title">Price</p>
+                <input type="text" name="create_price" id="create_price" placeholder="Price in %currency">
+                <button type=submit href="#">Create</button>
+            </form>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+
+</html>

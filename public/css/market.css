@@ -277,6 +277,7 @@ input[type="checkbox"]:checked + label{
 
   section#side_filter{
     display: flex;
+    flex-wrap: nowrap;
   }
 
   #sort-by-select{

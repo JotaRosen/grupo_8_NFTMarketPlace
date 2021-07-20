@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+        <link rel="stylesheet" href="../../public/css/profile_collection.css">
+    <body>
+        <%- include('partials/header') %>
+
+    <main>
+        <section id="profile_header">
+          <h1 id="profile_tittle">Profile</h1>
+            <nav id="profile_menu">
+                <ul id="profile_menu_links">
+                    <li><a href="/profile/Favs"><i class="fas fa-heart"></i><p>Likes</p></a></li>
+                    <li><a id="current" href="/profile"><i class="fas fa-folder"></i><p>Collection</p></a></li>
+                    <li><a href="/profile/Create" ><i class="fas fa-file-upload"></i><p>Create</p></a></li>
+                    <li><a href=""><i class="fas fa-chart-bar"></i><p>Stats</p></a></li>
+                    <li><a href=""><i class="fas fa-cog"></i><p>Settings</p></a></li>
+                </ul>
+            </nav>
+
+        </section>
+        <section id="collected_cards">
+            <article class="property-card">
+                <a href="/productDetail">
+                <div class="property-image">
+                    <img  src='../../public/img/nft-example-2.jpg'></div>
+                <div class="property-description">
+                    <div class="piece-description">
+                    <h5>Author</h5>
+                    <p>Piece name</p>
+                    </div>
+                    <div class="piece-price">
+                    <h5>Price</h5>
+                    <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                    </div>
+                </div>
+                </a>
+            </article>
+
+            <article class="property-card">
+                <a href="/productDetail">
+                <div class="property-image">
+                    <img  src='../../public/img/nft-example-2.jpg'></div>
+                <div class="property-description">
+                    <div class="piece-description">
+                    <h5>Author</h5>
+                    <p>Piece name</p>
+                    </div>
+                    <div class="piece-price">
+                    <h5>Price</h5>
+                    <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
+                    </div>
+                </div>
+                </a>
+
+            </article>
+            <article id="create_card" class="property-card">
+                <a href="/profile/Create">
+                    <h4>Create new card</h4>
+                    <i class="far fa-plus-square"></i>
+                </a>
+            </article>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+
+</html>

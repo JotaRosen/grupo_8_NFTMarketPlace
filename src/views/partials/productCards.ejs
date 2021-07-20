@@ -1,0 +1,16 @@
+<article class="property-card">
+    <a href="/productDetail/<%- product.id %>">
+      <div class="property-image">
+        <img  src='../../public/img/<%- product.image %>'></div>
+      <div class="property-description">
+        <div class="piece-description">
+          <h5><%- product.author %></h5>
+          <p><%- product.pieceName %></p>
+        </div>
+        <div class="piece-price">
+          <h5>Price</h5>
+          <div class="price-changer"><i class="fab fa-ethereum"></i><p><%- product.price %></p></div>
+        </div>
+      </div>
+    </a>
+  </article>
