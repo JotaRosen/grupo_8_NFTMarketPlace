@@ -177,4 +177,8 @@ p.setup_steps_description{
     article.setup_steps{
         margin: 1rem;
     }
+
+    #main__featured_artist{
+        width: 60%;
+    }
 }

@@ -19,7 +19,6 @@ const model = {
     random: function(){
         let products = this.all();
         let randomItem = products[(Math.round(Math.floor(Math.random()*products.length)))]
-        console.log(randomItem)
         return randomItem;
     }
 
