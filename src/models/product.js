@@ -15,6 +15,12 @@ const model = {
         // result contains the specific object we are looking for
         // for the product detail page for example
         return result;
+    },
+    random: function(){
+        let products = this.all();
+        let randomItem = products[(Math.round(Math.floor(Math.random()*products.length)))]
+        console.log(randomItem)
+        return randomItem;
     }
 
     //create, update, delete methods (only products) will go here.

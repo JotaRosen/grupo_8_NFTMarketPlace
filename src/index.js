@@ -14,6 +14,7 @@ app.use('/public',express.static(path.resolve(__dirname, '../public')));
 //Will have many routes 
 app.use(require('./routes/web'));
 app.use(require('./routes/productsRoutes'));
+app.use(require('./routes/userRoutes'));
 
 //Setting view Engine
 app.set("view engine","ejs");

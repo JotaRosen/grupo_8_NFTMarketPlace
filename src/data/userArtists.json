@@ -7,6 +7,14 @@
         "description": "I guess here it goes a description",
         "authorProfilePic": "user2.jpg",
         "authorPassword": "????????",
-        "authorCollections": []
+        "authorCollection": [
+            {
+            "id": 1,
+            "image": "nft-example-1.jpg",
+            "price": 0.054,
+            "author": "Author Name",
+            "authorId" : 1,
+            "pieceName": "holis"
+        }]
     }
 ]

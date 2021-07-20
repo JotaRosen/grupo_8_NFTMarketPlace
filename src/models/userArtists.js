@@ -13,6 +13,12 @@ const model = {
         let authorArray = this.all();
         let result = authorArray.find( author => author.authorName == authorName)
         return result;
+    },
+    findItem: function (authorName, itemId){
+        let author = this.one(authorName);
+        let item = author.authorCollection.find(item => item.id == itemId);
+        return item;
+
     }
 
 }
