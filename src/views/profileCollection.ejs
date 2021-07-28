@@ -20,48 +20,13 @@
 
         </section>
         <section id="collected_cards">
-            <article class="property-card">
-                <a href="/productDetail/2">
-                    <div id = 'edit-icon'>
-                        <i class="fas fa-pen"></i>          
-                      </div>
-                <div class="property-image">
-                    <img  src='../../public/img/nft-example-2.jpg'></div>
-                <div class="property-description">
-                    <div class="piece-description">
-                    <h5>Author</h5>
-                    <p>Piece name</p>
-                    </div>
-                    <div class="piece-price">
-                    <h5>Price</h5>
-                    <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-                    </div>
-                </div>
-                </a>
-            </article>
-
-            <article class="property-card">
-                <a href="/productDetail/2">
-                    <div id = 'edit-icon'>
-                        <i class="fas fa-pen"></i>          
-                      </div>
-                <div class="property-image">
-                    <img  src='../../public/img/nft-example-2.jpg'></div>
-                <div class="property-description">
-                    <div class="piece-description">
-                    <h5>Author</h5>
-                    <p>Piece name</p>
-                    </div>
-                    <div class="piece-price">
-                    <h5>Price</h5>
-                    <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-                    </div>
-                </div>
-                </a>
-
-            </article>
+            
+            <% collection.forEach(product => { %>
+                <%- include('partials/profileProdCard', { product }) %>
+            <% })%>
+                
             <article id="create_card" class="property-card">
-                <a href="/profile/Create">
+                <a class = 'property-card-links' href="/profile/Create">
                     <h4>Create new card</h4>
                     <i class="far fa-plus-square"></i>
                 </a>

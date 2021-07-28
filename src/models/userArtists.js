@@ -19,7 +19,20 @@ const model = {
         let item = author.authorCollection.find(item => item.id == itemId);
         return item;
 
+    },
+    likeAnItem: function(userId,itemId){
+        let user = this.one(userId);    
+        user.likeProds.push(itemId);
+        return true;
+    },
+
+    unlikeAnItem: function(userId,itemId){
+        let user = this.one(userId);    
+        let result = user.likeProds.filter(item => item != itemId);
+        user.likeProds = result;
+        return true;
     }
+
 
 }
 

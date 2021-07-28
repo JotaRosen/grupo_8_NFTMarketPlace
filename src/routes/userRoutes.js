@@ -9,7 +9,8 @@ router.get("/resetPass", userController.resetPass);
 router.get("/profile", userController.userProfile); //profile collection is default
 router.get("/profile/Create", userController.userCreate); //should be a post
 router.get("/profile/Favs", userController.userFavs);
-router.get('/profile/item/edit',userController.userEdit)//router.post()
+router.get('/profile/:id/edit',userController.userEdit);
+
 
 
 module.exports = router;

@@ -140,7 +140,10 @@ main{
 #create_image{
     position: absolute;
     left: -99999rem;
+    object-fit: contain;
 } 
+
+
 #create_image_label{
     display: flex;
     flex-direction: column;
@@ -171,11 +174,14 @@ color: #6D07E6;
     text-align: center;
 }
  
+#create_image_label img{
+    width: 100%;
+}
 #create_form button{
     margin-top: 1rem;
     align-self: flex-end;
     padding: 1rem;
-    width: 10rem;
+    width: 12rem;
     font-size: 1.3rem;
     font-weight: 550;
     color: white;
@@ -215,5 +221,9 @@ color: #6D07E6;
     }
     #create_image_label p#label_line{
         font-size: 1.1rem;
+    }
+    #button-id{
+        display: flex;
+        justify-content: space-between;
     }
 }
