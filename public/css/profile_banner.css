@@ -1,0 +1,41 @@
+#profile_banner{
+    width: 100%;
+    height: 16rem;
+    border-bottom: 1px solid rgb(229, 232, 235);
+  }
+  
+  #profile_background{
+    height: 9rem;
+    background-color: #A193F1;
+  }
+  
+  #profile_userbox{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(60%);
+  }
+  
+  .profile_photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-color: rgb(7, 7, 7);
+    border: 2px solid white;
+    overflow: hidden;
+  }
+
+  .profile_photo img{
+      object-fit: cover;
+      min-width: 100%;
+      min-height: 100%;
+  }
+  
+  #user_name{
+    margin-top: 1rem;
+  }

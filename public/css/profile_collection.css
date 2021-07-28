@@ -14,9 +14,9 @@ body {
 main{
     margin-top: 8vh;
 }
+
 #profile_header{
     padding: 1rem;
-    border-bottom: 1px solid #d4d4d4;
 
 }
 #profile_header h1{
@@ -29,14 +29,14 @@ main{
 }
 #profile_menu{
     max-width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 #profile_menu_links{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     list-style: none;
-    justify-content: center;
 }
 
 #profile_menu_links li{
