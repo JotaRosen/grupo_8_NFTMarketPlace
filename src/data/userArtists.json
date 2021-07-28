@@ -1,24 +1,29 @@
 [
-    {
-        "authorName": "Author Name",
-        "authorId": 1,
-        "authorUsername": "author Username",
-        "authorEmail": "author@email.com",
-        "description": "I guess here it goes a description",
-        "authorProfilePic": "user2.jpg",
-        "authorPassword": "????????",
-        "likedProds": [3,9]
-
-    },
-    {
-        "authorName": "Author harcodeado",
-        "authorId": 2,
-        "authorUsername": "author 2 Username",
-        "authorEmail": "author2@email.com",
-        "description": "I guess here it goes a another description",
-        "authorProfilePic": "user.png",
-        "authorPassword": "????????",
-        "likedProds": [1,4,5]
-    }
-
+  {
+    "authorName": "Author Name",
+    "authorId": 1,
+    "authorUsername": "author Username",
+    "authorEmail": "author@email.com",
+    "description": "I guess here it goes a description",
+    "authorProfilePic": "user2.jpg",
+    "authorPassword": "????????",
+    "likedProds": [
+      3,
+      9
+    ]
+  },
+  {
+    "authorName": "Author harcodeado",
+    "authorId": 2,
+    "authorUsername": "author 2 Username",
+    "authorEmail": "author2@email.com",
+    "description": "I guess here it goes a another description",
+    "authorProfilePic": "user.png",
+    "authorPassword": "????????",
+    "likedProds": [
+      1,
+      4,
+      5
+    ]
+  }
 ]

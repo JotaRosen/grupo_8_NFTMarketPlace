@@ -1,9 +1,9 @@
 <article class="property-card">
     <a class = 'property-card-links' href="/productDetail/<%- product.id %>">
-    <form id = 'edit-icon-wrapper' method = 'GET' >
-        <button style="border: none; background-color: white;" type="submit" formaction="/profile/<%- product.id %>/edit?_METHOD=GET">
-            <div id = 'edit-icon'>
-                <i class="fas fa-pen"></i>          
+    <form id = '<%- cardStyle.iconStyle %>-icon-wrapper' method = 'GET' >
+        <button style="border: none; background-color: white;" type="submit" formaction="/profile/<%- product.id %>/<%- cardStyle.iconStyle %>?_METHOD=GET">
+            <div id = '<%- cardStyle.iconStyle %>-icon'>
+                <i class="fas fa-<%- cardStyle.icon %>"></i>          
             </div>
         </button>
     </form>
@@ -19,5 +19,6 @@
         <div class="price-changer"><i class="fab fa-ethereum"></i><p><%- product.price %></p></div>
         </div>
     </div>
+    <a id = 'checkout-button'>Checkout Now</a>
 </a>  
 </article>

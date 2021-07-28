@@ -15,7 +15,7 @@ const model = {
         // result contains the specific object we are looking for
         // for the product detail page for example
         return result;
-        
+
     },
     
     allFromOneAuthor: function(authorId,itemId){
@@ -32,6 +32,15 @@ const model = {
         return randomItem;
     },
 
+    filterLikedItems: function(likedItems){
+        let products = this.all();
+        let result = []
+        likedItems.forEach( element =>{
+            result.push(products.find( item => item.id == element));
+        });
+        return result
+    },
+
     //CRUD Methods
 
     newProd: function(data,file){
@@ -42,7 +51,7 @@ const model = {
             image: file.filename,
             price: data.create_price,
             author: 'Author harcodeado',
-            authorId: 5,
+            authorId: 2,
             pieceName: data.create_title,
             description: data.create_description
         }    

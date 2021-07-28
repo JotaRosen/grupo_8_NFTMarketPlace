@@ -11,6 +11,7 @@ router.get("/profile/Create", userController.userCreate); //should be a post
 router.get("/profile/Favs", userController.userFavs);
 router.get('/profile/:id/edit',userController.userEdit);
 
+router.get("/profile/:id/remove", userController.userFavsErase)
 
 
 module.exports = router;

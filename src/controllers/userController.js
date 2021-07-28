@@ -11,12 +11,39 @@ module.exports = {
         let userSession = userArtists.one('Author harcodeado');
         //will obtain user id from session, now is harcoded
         res.render('profileCollection',{
-         user: userSession,
-        collection: products.allFromOneAuthor(userSession.authorId)
+            user: userSession,
+            collection: products.allFromOneAuthor(userSession.authorId),
+            cardStyle: {
+                iconStyle: 'edit',
+                icon: 'pen',
+                method: 'GET'
+            } 
     })
-},
+    },
     userCreate: (req,res) => res.render('profileCreate'),
-    userFavs: (req,res) => res.render('profileFavs', {user: userArtists}),
+
+    userFavs: (req,res) => {
+        //will obtain user id from session, now is harcoded
+        let someUser = userArtists.one('Author harcodeado');
+        res.render('profileFavs', {
+            userLikes: products.filterLikedItems(someUser.likedProds),
+            cardStyle: {
+                iconStyle: 'remove',
+                icon: 'trash',
+                method: 'PUT'
+            } 
+        });
+    },
+
+    userFavsErase: (req,res) => {
+        //will obtain user id from session, now is harcoded
+        let rawItemId = req.params.id
+        let result = userArtists.unlikeAnItem('Author harcodeado',rawItemId);
+
+        return result == true ? res.redirect("/profile/Favs") : res.send("Error: no data to unlike ");
+        
+
+    },
     userEdit: (req,res) => {
         let rawId = req.params.id;
         product = products.one(rawId);

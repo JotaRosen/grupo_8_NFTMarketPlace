@@ -22,7 +22,7 @@
         <section id="collected_cards">
             
             <% collection.forEach(product => { %>
-                <%- include('partials/profileProdCard', { product }) %>
+                <%- include('partials/profileProdCard', { product , cardStyle }) %>
             <% })%>
                 
             <article id="create_card" class="property-card">

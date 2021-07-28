@@ -206,6 +206,14 @@ main{
 }
 
 
+#remove-icon-wrapper{
+  text-decoration: none;
+  display: flex;
+  align-self:  flex-end;
+  border: none;
+  background-color: white;
+}
+
 #remove-icon{
   display: flex;
   align-self: flex-end;

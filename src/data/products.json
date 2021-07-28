@@ -96,7 +96,7 @@
     "author": "Author harcodeado",
     "authorId": 2,
     "pieceName": "un gifsito",
-    "description": " bla bla"
+    "description": ""
   },
   {
     "id": 12,
@@ -104,24 +104,24 @@
     "price": "0.05442",
     "author": "Author harcodeado",
     "authorId": 2,
-    "pieceName": "new gif",
-    "description": "updating imagen"
+    "pieceName": "not a gif",
+    "description": ""
   },
   {
     "id": 13,
-    "image": "nft-example-13.jpg",
+    "image": "create_image-1627438970722.gif",
     "price": "0.57",
     "author": "Author harcodeado",
-    "authorId": 5,
-    "pieceName": "un gifsito 2",
-    "description": "blalbal"
+    "authorId": 2,
+    "pieceName": "un gifsito de pikachu 2",
+    "description": "ahre loco"
   },
   {
     "id": 14,
     "image": "create_image-1627433484040.gif",
     "price": "0.57",
     "author": "Author harcodeado",
-    "authorId": 5,
+    "authorId": 2,
     "pieceName": "new gifsito",
     "description": "Esto es un gif"
   }

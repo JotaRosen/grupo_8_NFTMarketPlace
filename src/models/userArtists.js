@@ -26,10 +26,17 @@ const model = {
         return true;
     },
 
-    unlikeAnItem: function(userId,itemId){
-        let user = this.one(userId);    
-        let result = user.likeProds.filter(item => item != itemId);
-        user.likeProds = result;
+    unlikeAnItem: function(userName,itemId){
+        const directory = path.resolve(__dirname,"../data","userArtists.json")
+        let usersArray = this.all();
+
+        let user = this.one(userName);
+        let result = user.likedProds.filter(item => item != itemId);
+
+        let indexToUpdate = usersArray.findIndex( userToUpdate => userToUpdate.authorId == user.authorId )
+        usersArray[indexToUpdate].likedProds = result;
+
+        fs.writeFileSync(directory,JSON.stringify(usersArray,null,2));
         return true;
     }
 
