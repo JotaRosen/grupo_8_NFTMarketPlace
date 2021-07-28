@@ -8,7 +8,22 @@ module.exports = {
         product = products.one(rawId);
         res.render('productDetail', {
             product: product,
-            author: userArtists.one(product.author)
+            author: userArtists.one(product.author),
+            otherJobs: products.allFromOneAuthor(product.authorId,rawId)
         })
+    },
+    save: (req,res) => {
+        let result = products.newProd(req.body,req.file);
+        return result == true ? res.redirect("/profile") : res.send("Error: could not create item ") 
+    },
+    update: (req,res) =>{
+        let result = products.edit(req.body,req.file,req.params.id)
+        return result == true ? res.redirect("/profile") : res.send("Error: could not create item") 
+    },
+
+    delete: (req,res) =>{
+        let result = products.delete(req.params.id);
+        return result == true ? res.redirect("/profile") : res.send("Error: could not found data ") 
     }
+
 }

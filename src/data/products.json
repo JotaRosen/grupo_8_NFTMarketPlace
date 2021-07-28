@@ -1,97 +1,128 @@
 [
-    {
-        "id": 1,
-        "image": "nft-example-1.jpg",
-        "price": 0.054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Falopa"
-    },
-    {
-        "id": 2,
-        "image": "nft-example-2.jpg",
-        "price": 0.0654,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 3,
-        "image": "nft-example-3.jpg",
-        "price": 0.6054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 4,
-        "image": "nft-example-4.jpg",
-        "price": 0.054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 5,
-        "image": "nft-example-5.png",
-        "price": 0.7054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 6,
-        "image": "nft-example-6.jpg",
-        "price": 0.034,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 7,
-        "image": "nft-example-7.png",
-        "price": 0.054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 8,
-        "image": "nft-example-8.jpg",
-        "price": 0.044,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 9,
-        "image": "nft-example-9.png",
-        "price": 0.054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },{
-        "id": 11,
-        "image": "nft-example-11.jpg",
-        "price": 0.054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 12,
-        "image": "nft-example-12.jpg",
-        "price": 0.054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    },
-    {
-        "id": 13,
-        "image": "nft-example-13.jpg",
-        "price": 0.054,
-        "author": "Author Name",
-        "authorId" : 1,
-        "pieceName": "Piece Name"
-    }
+  {
+    "id": 1,
+    "image": "nft-example-1.jpg",
+    "price": 0.0654,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "image": "nft-example-2.jpg",
+    "price": "0.6054",
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "new name ",
+    "description": "new name same photo"
+  },
+  {
+    "id": 3,
+    "image": "nft-example-3.jpg",
+    "price": 0.054,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "image": "nft-example-4.jpg",
+    "price": 0.7054,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "image": "nft-example-5.png",
+    "price": 0.034,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "image": "nft-example-6.jpg",
+    "price": 0.054,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 7,
+    "image": "nft-example-7.png",
+    "price": 0.044,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 8,
+    "image": "nft-example-8.jpg",
+    "price": 0.054,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 9,
+    "image": "nft-example-9.png",
+    "price": 0.054,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 10,
+    "image": "nft-example-11.jpg",
+    "price": 0.054,
+    "author": "Author Name",
+    "authorId": 1,
+    "pieceName": "Piece Name",
+    "description": ""
+  },
+  {
+    "id": 11,
+    "image": "create_image-1627343562347.gif",
+    "price": "0.055",
+    "author": "Author harcodeado",
+    "authorId": 2,
+    "pieceName": "un gifsito",
+    "description": ""
+  },
+  {
+    "id": 12,
+    "image": "nft-example-12.jpg",
+    "price": "0.05442",
+    "author": "Author harcodeado",
+    "authorId": 2,
+    "pieceName": "not a gif",
+    "description": ""
+  },
+  {
+    "id": 13,
+    "image": "create_image-1627438970722.gif",
+    "price": "0.57",
+    "author": "Author harcodeado",
+    "authorId": 2,
+    "pieceName": "un gifsito de pikachu 2",
+    "description": "ahre loco"
+  },
+  {
+    "id": 14,
+    "image": "create_image-1627433484040.gif",
+    "price": "0.57",
+    "author": "Author harcodeado",
+    "authorId": 2,
+    "pieceName": "new gifsito",
+    "description": "Esto es un gif"
+  }
 ]

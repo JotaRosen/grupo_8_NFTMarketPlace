@@ -24,7 +24,7 @@
           </div>
           <div id="main__featured_artist">
             <img
-              src="../../public/img/<%- product.image %>"
+              src="../../public/tmp/uploads/<%- product.image %>"
               id="main_featured_img"
             />
           </div>
@@ -49,113 +49,10 @@
         <h4>Other jobs from this artist</h4>
       </section>
       <section id="artist_jobs">
-
-        
-
-        <article class="property-card">
-          <a href="/productDetail">
-            <div class="property-image">
-              <img  src='../../public/img/nft-example-2.jpg'></div>
-            <div class="property-description">
-              <div class="piece-description">
-                <h5>Author</h5>
-                <p>Piece name</p>
-              </div>
-              <div class="piece-price">
-                <h5>Price</h5>
-                <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <article class="property-card">
-          <a href="/productDetail">
-            <div class="property-image">
-              <img  src='../../public/img/nft-example-2.jpg'></div>
-            <div class="property-description">
-              <div class="piece-description">
-                <h5>Author</h5>
-                <p>Piece name</p>
-              </div>
-              <div class="piece-price">
-                <h5>Price</h5>
-                <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <article class="property-card">
-          <a href="/productDetail">
-            <div class="property-image">
-              <img  src='../../public/img/nft-example-2.jpg'></div>
-            <div class="property-description">
-              <div class="piece-description">
-                <h5>Author</h5>
-                <p>Piece name</p>
-              </div>
-              <div class="piece-price">
-                <h5>Price</h5>
-                <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <article class="property-card">
-          <a href="/productDetail">
-            <div class="property-image">
-              <img  src='../../public/img/nft-example-2.jpg'></div>
-            <div class="property-description">
-              <div class="piece-description">
-                <h5>Author</h5>
-                <p>Piece name</p>
-              </div>
-              <div class="piece-price">
-                <h5>Price</h5>
-                <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <article class="property-card">
-          <a href="/productDetail">
-            <div class="property-image">
-              <img  src='../../public/img/nft-example-2.jpg'></div>
-            <div class="property-description">
-              <div class="piece-description">
-                <h5>Author</h5>
-                <p>Piece name</p>
-              </div>
-              <div class="piece-price">
-                <h5>Price</h5>
-                <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-              </div>
-            </div>
-          </a>
-        </article>
-
-
-        <article class="property-card">
-          <a href="/productDetail">
-            <div class="property-image">
-              <img  src='../../public/img/nft-example-2.jpg'></div>
-            <div class="property-description">
-              <div class="piece-description">
-                <h5>Author</h5>
-                <p>Piece name</p>
-              </div>
-              <div class="piece-price">
-                <h5>Price</h5>
-                <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-              </div>
-            </div>
-          </a>
-        </article>
-        
-        
+  
+        <% otherJobs.forEach(product => { %>
+          <%- include('partials/productCards', { product }) %>
+      <% })%>
         
         
       </section>  

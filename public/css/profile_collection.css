@@ -115,7 +115,7 @@ main{
   box-shadow: #7e42c74d 0px 0px 10px;
 
 }
-.property-card a{
+.property-card-links{
   height: 100%;
   width: 100%;
   display: flex;
@@ -206,6 +206,14 @@ main{
     color: #c3c3c3;
 }
 
+#edit-icon-wrapper{
+  text-decoration: none;
+  display: flex;
+  align-self:  flex-end;
+  border: none;
+  background-color: white;
+}
+
 #edit-icon{
   display: flex;
   align-self: flex-end;
@@ -222,8 +230,13 @@ main{
   background-color: white;
 }
 
+
 #edit-icon:hover{
   color: #6D07E6;
+}
+
+#checkout-button{
+  display: none;
 }
 
 

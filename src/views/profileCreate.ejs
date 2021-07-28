@@ -20,14 +20,14 @@
         </section>
         <section id="create_card">
             <h3>Create a new item</h3>
-            <form id="create_form" name="create_form" method="POST">
+            <form id="create_form" name="create_form" method="POST" enctype="multipart/form-data">
                 <p id="form_title">Image, video, audio or 3D model</p>
                 <label id="create_image_label" for="create_image">
                     <i class="fas fa-image"></i>
                     <p>Drag and drop file</p>
                     <p id="label_line">or click to browse from your computer</p>
                 </label>
-                <input type="file"  name="create_image" id="create_image">
+                <input type="file"  name="create_image" id="create_image" multiple>
                 <p id="form_title">Name *</p>
                 <input type="text" required name="create_title" id="create_title" placeholder="Item name">
                 <p id="form_title">Description</p>

@@ -52,6 +52,7 @@ div#welcome_text a.main_banner_button{
     text-align: center;
     padding: 0.8rem;
     border-radius: 0.2rem;
+    text-decoration: none;
 
 }
 

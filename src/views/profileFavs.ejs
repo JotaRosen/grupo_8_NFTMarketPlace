@@ -20,27 +20,9 @@
 
         </section>
         <section id="collected_cards">
-            <article class="property-card">
-                <a href="/productDetail">
-                <div id = 'remove-icon'>
-                    <i class="fas fa-trash"></i>
-                </div>
-                <div class="property-image">
-                    <img  src='../../public/img/nft-example-2.jpg'></div>
-                <div class="property-description">
-                    <div class="piece-description">
-                    <h5>Author</h5>
-                    <p>Piece name</p>
-                    </div>
-                    <div class="piece-price">
-                    <h5>Price</h5>
-                    <div class="price-changer"><i class="fab fa-ethereum"></i><p>0.054</p></div>
-                    </div>
-                </div>
-                <a id = 'checkout-button'>Checkout Now</a>
-                </a>
-
-            </article>
+            <% userLikes.forEach(product => { %>
+                <%- include('partials/profileProdCard', { product, cardStyle }) %>
+            <% })%>
         </section>
     </main>
     <%- include('partials/footer') %>
