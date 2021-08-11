@@ -2,12 +2,15 @@
 <html lang="en">
     <%- include('partials/head') %>
         <link rel="stylesheet" href="../../public/css/profile_collection.css">
+        <link rel="stylesheet" href="../../public/css/profile_banner.css">
+
     <body>
         <%- include('partials/header') %>
 
     <main>
+        <%- include('partials/profile_banner') %>
+
         <section id="profile_header">
-          <h1 id="profile_tittle">Profile</h1>
             <nav id="profile_menu">
                 <ul id="profile_menu_links">
                     <li><a href="/profile/Favs"><i class="fas fa-heart"></i><p>Likes</p></a></li>
