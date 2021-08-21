@@ -1,14 +1,64 @@
 //add here user model when ready
 const userArtists = require('../models/userArtists');
 const products = require('../models/product');
+const { validationResult } = require('express-validator');
+
 
 
 module.exports = {
-    login: (req,res) => res.render('login'),
-    register: (req,res) => res.render('register'),
+    login: (req,res) =>{
+        if(req.session.user){
+            let sessionData = {
+                user: req.session.user,
+                collection: products.allFromOneAuthor(req.session.user.authorId),
+                cardStyle: {
+                    iconStyle: 'edit',
+                    icon: 'pen',
+                    method: 'GET'
+                }
+            };
+            return res.render('profileCollection', sessionData);
+        }
+        return res.render('login', {errors: undefined});
+    },
+
+
+    register: (req,res) => res.render('register', {errors: undefined}),
     resetPass: (req,res) => res.render('resetPassword'),
+
+
+    createUser: (req,res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+          return res.render("register",{ errors: errors,title:"Join",old:req.body });
+        }else{
+            userArtists.createAccount(req.body);
+          return res.redirect("login");
+        }
+        
+      },
+
+    access: (req,res) => {
+    
+        const errors = validationResult(req);
+        // checks req is a valid req 
+
+        if (!errors.isEmpty()) {
+            //errors is a promise and is being set from loginValidator Middleware
+          return res.render("login",{ errors: errors,title:"Access", old:req.body });
+        }else{
+          let user = userArtists.oneByEmail(req.body.email);
+          if(req.body.remember){
+              //setting cookie value, and time duration
+            res.cookie("email",req.body.email,{maxAge:300000})
+          }
+          req.session.user = user;
+          return res.redirect("market")
+        }
+      },
+
     userProfile: (req,res) =>{ 
-        let userSession = userArtists.one('Author harcodeado');
+        let userSession = req.session.user;
         //will obtain user id from session, now is harcoded
         res.render('profileCollection',{
             user: userSession,

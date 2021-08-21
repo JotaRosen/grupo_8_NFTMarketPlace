@@ -8,21 +8,28 @@
                 <video src="../../public/img/Music - 35889.mp4" autoplay loop playsinline muted></video>
 
                 <article id = 'login-box'>
-                    <article class ='login-containers'>
-                        <img id="login-logo"src="../../public/img/LOGO_DEMO.png">
-
-                        <p>Sign up for New FuTure</p>
+                    <% if(errors) {%>
+                        <article class ='login-containers'>
+                            <img id="login-logo"src="../../public/img/LOGO_DEMO.png">
+                            <p>Sign up for New FuTure</p>
+                            <h5 style="color: crimson;"><%- errors.errors[0].msg %></h5>
+                            </article>
+                     <% } else {%>
+                            <article class ='login-containers'>
+                            <img id="login-logo"src="../../public/img/LOGO_DEMO.png">
+                            <p>Sign up for New FuTure</p>
                     </article>
+                    <% } %>
                     <article class = "login-containers">
-                        <form action="/" method="POST">
-                            <input type="text" name="user" placeholder="Email Address*" required>
-                            <input type="text" name="user" placeholder="Confirm Email Address*" required>
-                            <input type="text" name="user" placeholder="Username*" required>
-                            <input type="text" name="user" placeholder="Your Name*" required>
-                            <input type="password" name="pass" placeholder="Password*" required>
-                            <input type="password" name="pass" placeholder="Confirm Password*" required>
+                        <form action="/register" method="POST">
+                            <input type="text" name="email" placeholder="Email Address*" required>
+                            <input type="text" name="emailConfirmed" placeholder="Confirm Email Address*" required>
+                            <input type="text" name="username" placeholder="Username*" required>
+                            <input type="text" name="name" placeholder="Your Name*" required>
+                            <input type="password" name="password" placeholder="Password*" required>
+                            <input type="password" name="passwordConfirmed" placeholder="Confirm Password*" required>
                             <p id = 'password-helper'>Password must be at least 8 characters and contain 1 number</p>
-                            <input type="checkbox" name="my-checkbox" id="stay-tunned-container">
+                            <input type="checkbox" name="stayTunnedBox" id="stay-tunned-container">
                             <label for="stay-tunned-container" id = 'stay-tunned-text'>Stay up to date with New FuTure</label>
                             </label>
                             <input class = 'submit-button' type="submit" value="Enviar">

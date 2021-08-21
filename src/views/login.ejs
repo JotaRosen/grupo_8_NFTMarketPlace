@@ -7,15 +7,24 @@
             <section class = 'main-login-container'>
                 <video src="../../public/img/Music - 35889.mp4" autoplay loop playsinline muted></video>
                 <article id = 'login-box'>
+                  <% if(errors) {%>
+                    <article class ='login-containers'>
+                        <img id="login-logo"src="../../public/img/LOGO_DEMO.png">
+                        <h4>Log in</h4>
+                        <p>Please login to continue</p>
+                        <h5 style="color: crimson;"><%- errors.errors[0].msg %></h5>
+                    </article>
+                 <% } else {%>
                     <article class ='login-containers'>
                         <img id="login-logo"src="../../public/img/LOGO_DEMO.png">
                         <h4>Log in</h4>
                         <p>Please login to continue</p>
                     </article>
+                    <% }%>
                     <article class = "login-containers">
-                        <form action="/" method="POST">
-                            <input type="text" name="user" placeholder="Email Address or Username" required>
-                            <input type="password" name="pass" placeholder="Password" required>
+                        <form action="/login" method="POST">
+                            <input type="text" name="email" placeholder="Email Address or Username" required>
+                            <input type="password" name="password" placeholder="Password" required>
                             <input class = 'submit-button' type="submit" value="Enviar">
                             <nav class = 'login-help'>
                                 <a   href="/resetPass">Forgot Password?</a>
