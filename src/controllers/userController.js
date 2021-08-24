@@ -48,10 +48,10 @@ module.exports = {
           return res.render("login",{ errors: errors,title:"Access", old:req.body });
         }else{
           let user = userArtists.oneByEmail(req.body.email);
-          if(req.body.remember){
+          /*if(req.body.stayLogged == 'on'){
               //setting cookie value, and time duration
             res.cookie("email",req.body.email,{maxAge:300000})
-          }
+          } TODO:FIXME*/
           req.session.user = user;
           return res.redirect("market")
         }
