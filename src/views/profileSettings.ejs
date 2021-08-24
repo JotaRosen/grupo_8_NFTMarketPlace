@@ -16,29 +16,31 @@
                 <ul id="profile_menu_links">
                     <li><a href="/profile/Favs"><i class="fas fa-heart"></i><p>Likes</p></a></li>
                     <li><a href="/profile"><i class="fas fa-folder"></i><p>Collection</p></a></li>
-                    <li><a id="current" href=""><i class="fas fa-file-upload"></i><p>Create</p></a></li>
+                    <li><a href="/profile/Create"><i class="fas fa-file-upload"></i><p>Create</p></a></li>
                     <li><a href=""><i class="fas fa-chart-bar"></i><p>Stats</p></a></li>
-                    <li><a href="/profile/Settings"><i class="fas fa-cog"></i><p>Settings</p></a></li>
+                    <li><a id="current" href=""><i class="fas fa-cog"></i><p>Settings</p></a></li>
                 </ul>
             </nav>
         </section>
         <section id="create_card">
-            <h3>Create a new item</h3>
+            <h3>User Settings</h3>
             <form id="create_form" name="create_form" method="POST" enctype="multipart/form-data">
-                <p id="form_title">Image, video, audio or 3D model</p>
+                <h4 id="form_title">Username</h4>
+                <input type="text" required name="create_title" id="create_title" value = "<%- userArtists.authorUsername %>">
+
+                <h4 id="form_title">Profile avatar</h4>
                 <label id="create_image_label" for="create_image">
                     <i class="fas fa-image"></i>
                     <p>Drag and drop file</p>
-                    <p id="label_line">or click to browse from your computer</p>
+                    <p id="label_line">(500x500px recommended)</p>
                 </label>
-                <input type="file"  name="create_image" id="create_image" multiple>
-                <p id="form_title">Name *</p>
-                <input type="text" required name="create_title" id="create_title" placeholder="Item name">
-                <p id="form_title">Description</p>
-                <textarea name="create_description" id="create_discription" placeholder="Describe your item (optional)"></textarea>
-                <p id="form_title">Price</p>
-                <input type="text" name="create_price" id="create_price" placeholder="Price in %currency">
-                <button type=submit href="#">Create</button>
+                <input type="file"  name="create_image" id="create_image">
+
+                <h4 id="form_title">Artist bio</h4>
+                <p>Let your buyers know more about the artist</p>
+                <textarea name="create_description" id="create_discription"><%- userArtists.description %></textarea>
+                
+                <button formaction="/profile/settings?_method=PUT" type=submit href="#">Apply  Changes</button>
             </form>
         </section>
     </main>

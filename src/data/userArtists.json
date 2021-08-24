@@ -13,12 +13,12 @@
     ]
   },
   {
-    "authorName": "Author harcodeado",
+    "authorName": "author Hardcodeado",
     "authorId": 2,
     "authorUsername": "author 2 Username",
     "authorEmail": "author2@email.com",
-    "description": "I guess here it goes a another description",
-    "authorProfilePic": "user.png",
+    "description": "I guess here it goes a another description update\r\n",
+    "authorProfilePic": "create_image-1629687821033.jpg",
     "authorPassword": "$2b$10$pJccLp2nRTsEph6XfVTynuvMEZnqSf7CYDFOS7Yu7TbXkSLZew2kK",
     "likedProds": [
       1,
@@ -33,6 +33,32 @@
     "description": null,
     "authorPassword": "$2b$10$pHQoNgjjEEYEWByMxwhHK.Fe1YMpiLiDm3Ct8kGfip3jDE5AJSAPy",
     "authorProfilePic": null,
+    "likedProds": [
+      "8",
+      "7",
+      "12"
+    ]
+  },
+  {
+    "authorName": "Julián Rosenfeld",
+    "authorId": 4,
+    "authorUsername": "burrytex",
+    "authorEmail": "juli_rosenfeld@hotmail.com",
+    "description": null,
+    "authorPassword": "$2b$10$8kZd47bcZqreDh8o6xvUVODgmeFKiucU9Sa8SoZVbehERBdouJz9u",
+    "authorProfilePic": null,
     "likedProds": []
+  },
+  {
+    "authorName": "Ramiro Fernandez",
+    "authorId": 5,
+    "authorUsername": "Ramifer",
+    "authorEmail": "rami@fer.com",
+    "description": null,
+    "authorPassword": "$2b$10$sakS/CkDU6/qv2.UKJBp6eeC5/BEwFulHDtwqK6WmbUGoxEkoaN/.",
+    "authorProfilePic": null,
+    "likedProds": [
+      "12"
+    ]
   }
 ]

@@ -1,8 +1,12 @@
 <section id="profile_banner">
     <div id="profile_background">
         <div id="profile_userbox">
-            <div class="profile_photo"><img src="/public/img/nft-example-3.jpg"></div>
-            <h3 id="user_name">Mr. Anderson</h3>
+            <% if(user.authorProfilePic) {%>
+                <div class="profile_photo"><img src="../../../public/img/usersProfile/<%- user.authorProfilePic%>"></div>
+            <%} else{%>
+                <div class="profile_photo"><img src="../../../public/img/usersProfile/defaultUsersPic.png"></div>
+            <% }%>
+            <h3 id="user_name"><%- user.authorUsername%></h3>
         </div>
     </div>
 </section>

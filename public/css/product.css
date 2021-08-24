@@ -8,177 +8,163 @@ main {
 }
 
 #main-product-section{
+  width: 100%;
   display: flex;
+  align-self: center;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
+  margin-bottom: 2rem;
+
 }
 
-
-section#main_banner {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  width: 100vw;
-  margin-top: 12vh;
-}
-
-div#main_banner_featured {
+#tittle{
+  font-size: 1.3rem;
   width: 90%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
+  margin: 1rem 0 1rem 2rem;
+  text-align: left;
+
+}
+
+#authorName{
+  margin-left: 1rem;
+  font-size: 1.1rem;
+}
+
+#authorName a{
+  color: #6d07e6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#productImage{
+  margin: 1rem 0 1rem 0;
+  width: 90%;
+  border-radius: 0.5rem;
+  border: #A193F1 0.5px solid;
+  overflow: hidden;
+
+}
+
+#image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0 0.5 0.5rem 0.5rem;
+
+}
+
+#description{
+  border-radius: 0.3rem;
+  border: #A193F1 0.5px solid;
+  margin: 1rem 0;
   
 }
 
-div.welcome_text {
+#description h2{
+  font-size: 1.3rem;
+  padding: 1rem;
+  border-bottom: #A193F1 0.5px solid;
+
+}
+
+#description h2 i {
+  margin-right: 1rem;
+}
+
+#description_text{
+  display: flex;
+  flex-direction: column;
+  background-color: #ebe8f175;
+  padding: 1rem;
+}
+
+#created_by{
+ color: #464646;
+ margin-bottom: 1.2rem;
+}
+#created_by a{
+  color: #6d07e6;
+  text-decoration: none;
+  cursor: pointer;
+}
+#piece_description{
+  margin-bottom: 2rem;
+  text-align: center;
+
+}
+
+#product_pricing {
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-self: center;
+  flex-direction: column;
+  align-items: center;
   justify-content: left;
+  background-color: #ebe8f175;
+  border-radius: 0.3rem;
+  border: #A193F1 0.5px solid;
+  margin: 1rem 0;
+
+}
+
+#product_pricing h3 {
+  width: 90%;
+  color: #5d5d5d;
+  font-weight: normal;
   text-align: left;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin: 1rem;
 }
 
-div.welcome_text h1 {
+#price{
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+#price h2 {
+  color: #5d5d5d;
+  text-align: left;
+  margin-right: 1rem;
+}
+
+#price h2 i{
   color: #6d07e6;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
+  margin-right: 0.5rem;
 }
 
-div.welcome_text a.main_banner_button {
-  width: 40%;
-  max-width: 10rem;
+#pricing{
+  width: 90%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.pricing_button{
+  width: 100%;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   padding: 0.8rem;
   border-radius: 0.2rem;
+  margin-top: 0.5rem;
 }
 
-div.welcome_text a.main_banner_button:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-div.welcome_text a#main_banner_to_market {
+#buy_now {
   color: white;
   background-color: #6d07e6;
-  margin-right: 0.2rem;
 }
 
-div.welcome_text a#main_banner_to_create {
+#add_likes {
   color: #a193f1;
   border: 1px solid #a193f1;
   background-color: white;
-  margin-left: 0.2rem;
 }
 
-div.welcome_text p {
-  width: 100%;
-  margin-top: 0.3rem;
-  margin-bottom: 1rem;
-  color: #444444;
-  text-align: left;
-}
-
-div.welcome_text h1{
-  text-align: left;
-}
-
-a{
-  text-decoration: none;
-}
-
-div#main__featured_artist {
-  order: -1;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  border-radius: 0.5rem;
-  border: 1px solid #4444;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 10px;
-  width: 75%;
-}
-
-img#main_featured_img {
-  border-radius: 0.5rem 0.5rem 0 0;
-  width: 100%;
-}
-
-div#main_banner_featured_description {
-  padding: 5%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-}
-
-div#fakeimage {
-  display: block;
-  height: 5vh;
-  width: 5vh;
-  border-radius: 50%;
-  background-color: #444444;
-  color: #44444400;
-  justify-self: flex-start;
-  margin-right: 4vw;
-}
-
-section#setup {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(transparent, #a193f1);
-  width: 100vw;
-  padding: 0rem 0 2rem 0;
-}
-
-section#setup h2 {
-  margin-top: 2em;
-  color: #444444;
-  margin: 0 2em 2em 2em;
-  text-align: center;
-}
-
-div#faqs_conteiner {
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-items: center;
-}
-
-article.setup_steps {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-items: center;
-  border-radius: 1em;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 2rem;
-  margin-bottom: 2rem;
-  max-width: 25rem;
-}
-
-p.setup_steps_title {
-  font-weight: bold;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-p.setup_steps_description {
-  text-align: center;
+#add_likes i {
+  margin-left: 0.5rem;
 }
 
 #author {
@@ -191,6 +177,21 @@ p.setup_steps_description {
   width: 70%;
   padding: 0.5rem;
   margin: 0.3rem;
+}
+
+#more_from_artist h4{
+  font-size: 1.3rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+#more_from_artist h4 i {
+  margin-right: 1rem;
+}
+
+
+#more_from_artist h4 span{
+  color: #6d07e6;
 }
 
 #artist_jobs {
@@ -208,11 +209,6 @@ p.setup_steps_description {
   
 }
 
-
-
-div#author img{
-  width: 75%;
-}
 
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
@@ -335,17 +331,6 @@ img#author {
   width: auto;
   align-self: center;
 }
-
-#price_and_author_conteiner {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  width: 90%;
-  text-align: left;
-  white-space: nowrap;
-}
 #artist_jobs_title {
   display: flex;
   flex-direction: column;
@@ -355,27 +340,51 @@ img#author {
   width: 100%;
 }
 @media (min-width: 760px) {
-  section#main_banner {
-    flex-wrap: nowrap;
+
+  #main-product-section{
     flex-direction: row;
+    justify-content: start;
+  }
+
+  #productImage{
+    order: 1;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+  }
+
+  #tittle{
+    max-width: fit-content;
+  }
+
+  #description{
+    order: 3;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+  }
+
+  #product_pricing{
+    order: 2;
+    width: 45%;
+    align-items: center;
     justify-content: center;
-  }
-
-  div.welcome_text{
-    padding: 5rem;
-  }
-
-  #artist_jobs {
-    width: 60%;
+    height: max-content;
     align-self: center;
-    align-content: flex-start;
   }
 
-  
+  #pricing{
+    flex-direction: row;
+  }
+  .pricing_button{
+    width: 45%;
+    margin-right: 0.5rem;
+  }
 
-  #price_and_author_conteiner {
-    width: 60%;
-    align-self: center;
-  } 
+  #add_likes i {
+    display: none;
+  }
 
 }

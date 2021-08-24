@@ -33,12 +33,15 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 })); // add req.session
+app.use(require("./middlewares/user")) // save user for views
+//app.use(require("./middlewares/logged")) // save user for views
+//app.use(require("./middlewares/styles")) // save user for views
 
 
 // Websites Routes
 //Will have many routes 
 app.use(require('./routes/web'));
-app.use(require('./routes/productsRoutes'));
 app.use(require('./routes/userRoutes'));
+app.use(require('./routes/productsRoutes'));
 //Listening to port ${port}
 app.listen(port, ()=> console.log('Server up on http://localhost:' + port));

@@ -57,8 +57,14 @@ module.exports = {
         }
       },
 
+      logout: (req,res) => {
+        //res.cookie("email",req.session.user.email,{maxAge:0})
+        delete req.session.user;
+        return res.redirect("/")
+      },
+
     userProfile: (req,res) =>{ 
-        let userSession = req.session.user;
+        let userSession = req.session.user
         //will obtain user id from session, now is harcoded
         res.render('profileCollection',{
             user: userSession,
@@ -74,9 +80,9 @@ module.exports = {
 
     userFavs: (req,res) => {
         //will obtain user id from session, now is harcoded
-        let someUser = userArtists.one('Author harcodeado');
+
         res.render('profileFavs', {
-            userLikes: products.filterLikedItems(someUser.likedProds),
+            userLikes: products.filterLikedItems(req.session.user.likedProds),
             cardStyle: {
                 iconStyle: 'remove',
                 icon: 'trash',
@@ -88,10 +94,25 @@ module.exports = {
     userFavsErase: (req,res) => {
         //will obtain user id from session, now is harcoded
         let rawItemId = req.params.id
-        let result = userArtists.unlikeAnItem('Author harcodeado',rawItemId);
+        let result = userArtists.unlikeAnItem(req.session.user.authorId,rawItemId);
 
-        return result == true ? res.redirect("/profile/Favs") : res.send("Error: no data to unlike ");
+        req.session.user.likedProds = result
+        return res.redirect("/profile/Favs");
         
+
+    },
+
+    userAddtoFavs: (req,res) =>{
+        let userSession = req.session.user;
+        let rawItemId = req.params.id;
+        if(!userSession){
+            res.redirect('/login');
+        }
+
+        let result = userArtists.likeAnItem(userSession.authorId, rawItemId);
+        req.session.user = result;
+
+        return res.redirect("/productDetail/" + rawItemId);
 
     },
     userEdit: (req,res) => {
@@ -102,5 +123,12 @@ module.exports = {
             item: products.one(rawId),
             author: userArtists.one(product.author)
         })
+    },
+    userSettings: (req,res) => res.render('profileSettings' , {userArtists: req.session.user}),
+
+    userSettingsEdit: (req,res) =>{
+        let result = userArtists.editUser(req.body,req.file, req.session.user.authorId)
+        return result == true ? res.redirect("/profile") : res.send("Error: could not create item") 
+
     }
 }
