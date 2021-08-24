@@ -30,8 +30,8 @@ app.use(methodOverride("_method")); // enable other HTTP methods rather than get
 app.use(cookies()); // add req.cookies and res.cookie()
 app.use(session({
     secret: 'ourSecretePrivateKey', //should be a environment variable
-    resave: false,
-    saveUninitialized: true
+    resave: true,
+    saveUninitialized: false
 })); // add req.session
 app.use(require("./middlewares/user")) // save user for views
 //app.use(require("./middlewares/logged")) // save user for views

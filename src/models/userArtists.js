@@ -61,7 +61,9 @@ const model = {
         let newImage = updated.authorProfilePic;
         // we erase the old image, to reupload the same, or a new one. 
         if(file != undefined){
-            fs.unlinkSync(path.resolve(__dirname,"../../public/img/usersProfile/",updated.authorProfilePic))
+            if(updated.authorProfilePic != null){
+                fs.unlinkSync(path.resolve(__dirname,"../../public/img/usersProfile/",updated.authorProfilePic))
+            }
             newImage = file.filename
         }
         users.map(user => {
@@ -72,9 +74,10 @@ const model = {
                 return user
             }
             return user
-        })
+        });
+    
         fs.writeFileSync(directory,JSON.stringify(users,null,2));
-        return true;
+        return this.oneById(id);
     },
 
     findItem: function (authorName, itemId){

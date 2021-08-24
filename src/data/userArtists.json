@@ -26,17 +26,18 @@
     ]
   },
   {
-    "authorName": "Julián Rosenfeld",
+    "authorName": "Burryto",
     "authorId": 3,
     "authorUsername": "Burryto",
     "authorEmail": "jrosenfeld@fi.uba.ar",
-    "description": null,
+    "description": "",
     "authorPassword": "$2b$10$pHQoNgjjEEYEWByMxwhHK.Fe1YMpiLiDm3Ct8kGfip3jDE5AJSAPy",
-    "authorProfilePic": null,
+    "authorProfilePic": "create_image-1629822576560.jpg",
     "likedProds": [
-      "8",
       "7",
-      "12"
+      "12",
+      "11",
+      "10"
     ]
   },
   {

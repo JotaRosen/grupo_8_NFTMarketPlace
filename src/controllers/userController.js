@@ -48,10 +48,10 @@ module.exports = {
           return res.render("login",{ errors: errors,title:"Access", old:req.body });
         }else{
           let user = userArtists.oneByEmail(req.body.email);
-          /*if(req.body.stayLogged == 'on'){
+          if(req.body.stayLogged == 'on'){
               //setting cookie value, and time duration
             res.cookie("email",req.body.email,{maxAge:300000})
-          } TODO:FIXME*/
+          }
           req.session.user = user;
           return res.redirect("market")
         }
@@ -127,8 +127,9 @@ module.exports = {
     userSettings: (req,res) => res.render('profileSettings' , {userArtists: req.session.user}),
 
     userSettingsEdit: (req,res) =>{
-        let result = userArtists.editUser(req.body,req.file, req.session.user.authorId)
-        return result == true ? res.redirect("/profile") : res.send("Error: could not create item") 
+        let result = userArtists.editUser(req.body,req.file, req.session.user.authorId);
+        req.session.user = result;
+        return res.redirect("/profile")
 
     }
 }
