@@ -43,15 +43,15 @@ const model = {
 
     //CRUD Methods
 
-    newProd: function(data,file){
+    newProd: function(user,data,file){
         const directory = path.resolve(__dirname,"../data","products.json")
         let products = this.all();
         let newProduct = {
             id: products.length > 0 ? products[products.length -1].id + 1: 1,
             image: file.filename,
             price: data.create_price,
-            author: 'Author harcodeado',
-            authorId: 2,
+            author: user.authorName,
+            authorId: user.authorId,
             pieceName: data.create_title,
             description: data.create_description
         }    

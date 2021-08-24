@@ -1,5 +1,4 @@
 
-
 /* This file feeds register.htlm with styles */
 
 
@@ -49,11 +48,32 @@
     margin-bottom: 1rem;
 }
 
+#session{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1em;
+    color: #797979;
+    width: 100%;
+}
+
+
 .login-containers input{
     height: 5vh;
     text-align: center;
     width: 100%;
     margin-top: 1em;
+}
+
+#session input{
+    height: 3vh;
+    width: 3vh;
+    justify-self: flex-end;
+    margin-top: 0em;
+    margin-left: 1em;
+
 }
 
 .submit-button{
@@ -114,6 +134,10 @@ video{
      .login-containers input{
         width: 75%;
     } 
+    #session{
+        width: 75%;
+        justify-self: center;
+    }
 
     video{
         display: flex;

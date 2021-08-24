@@ -95,7 +95,7 @@
     "price": "0.055",
     "author": "Author harcodeado",
     "authorId": 2,
-    "pieceName": "un gifsito",
+    "pieceName": "Solo cambio el nombre",
     "description": ""
   },
   {
@@ -106,5 +106,23 @@
     "authorId": 2,
     "pieceName": "not a gif",
     "description": ""
+  },
+  {
+    "id": 13,
+    "image": "create_image-1629767046818.gif",
+    "price": "0.57",
+    "author": "Julián Rosenfeld",
+    "authorId": 3,
+    "pieceName": "Gif del Burro",
+    "description": "Otra prueba de burryto "
+  },
+  {
+    "id": 14,
+    "image": "create_image-1629767118322.jpg",
+    "price": "0.03742",
+    "author": "Julián Rosenfeld",
+    "authorId": 3,
+    "pieceName": "YVAELTERCERO",
+    "description": "DALE wacho"
   }
 ]

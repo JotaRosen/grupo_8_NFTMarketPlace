@@ -10,54 +10,46 @@
     <main>
       <section id = 'main-product-section'>
 
-      <section id="main_banner">
-        <div id="main_banner_featured">
-          <div class="welcome_text">
-            <h1>EL FUTURO, AHORA.</h1>
-            <p>Se parte de la nueva generacion de artistas digitales</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
-              ex, tempora omnis pariatur corporis error voluptate repellat odio,
-              suscipit nulla laboriosam quam tenetur, eveniet impedit quisquam
-              dolorem necessitatibus harum! Exercitationem?
-            </p>
+
+          <div id="productImage">
+            <h2 id="tittle"><%- product.pieceName %> <span id="authorName">by <a href=""><%- product.author %></a></span></h2>
+            <img src="../../public/tmp/uploads/<%- product.image %>" id="image"/>
           </div>
-          <div id="main__featured_artist">
-            <img
-              src="../../public/tmp/uploads/<%- product.image %>"
-              id="main_featured_img"
-            />
+
+          <article id="description">
+            <h2><i class="fas fa-align-left"></i>Description</h2>
+            <div id="description_text">
+              <p id="created_by">Created by <a href=""><%- product.author %></a></p>
+              <p id="piece_description"><%- product.description %></p>
+            </div>
+          </article>
+
+          <div id="product_pricing">
+            <h3>Current price</h3>
+            <div id="price">
+              <h2><i class="fab fa-ethereum"></i><%- product.price %></h2>
+              <p>$covert to usd</p>
+            </div>
+            <div id="pricing">
+              <a class="pricing_button" id="buy_now">Buy Now</a>
+              <a style="text-decoration: none;" href = "/productDetail/<%- product.id %>/add" class="pricing_button" id="add_likes" method>Add to likes<i class="far fa-heart"></i></a>
+            </div>
           </div>
-        </div>
-        <div id="price_and_author_conteiner">
-          <div class="welcome_text">
-            <h1>EL FUTURO, AHORA.</h1>
-            <p>Se parte de la nueva generacion de artistas digitales</p>
-            <a class="main_banner_button" id="main_banner_to_market"
-              >Checkout Now</a
-            >
-            <a class="main_banner_button" id="main_banner_to_create">Add to likes</a>
-          </div>
-          <div id="author">
-            <img src="../../public/img/<%- author.authorProfilePic %>" />
-            <h4><%- product.author %></h4>
-            <p><%- author.description %></p>
-          </div>
-        </div>
+
       </section>
-      <section id="artist_jobs_title">
-        <h4>Other jobs from this artist</h4>
-      </section>
-      <section id="artist_jobs">
+
+      <section id="more_from_artist">
+        <h4><i class="fas fa-cubes"></i>More from <span><%- product.author %></span></h4>
+        <div id="artist_jobs">
   
         <% otherJobs.forEach(product => { %>
           <%- include('partials/productCards', { product }) %>
-      <% })%>
+        <% })%>
         
         
-      </section>  
+        </div>  
 
-    </section>
+      </section>
     </main>
     <footer>
       <section id="footer_newsteller">

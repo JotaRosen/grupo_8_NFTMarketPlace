@@ -9,13 +9,28 @@
         <a href="">FAQs</a>
     </nav>
     <nav id="menu">
+        <% if(user) {%>
+            <a id="navbar_login" href="/profile">
+                <p>Profile</p>
+                <i class="fas fa-user-circle"></i>
+            </a>
+            <a id="navbar_cart" href="/profile/Favs">
+                <p>Favorites</p>
+                <i class="fas fa-heart"></i>
+            </a>
+            <a id="navbar_cart" href="/logout">
+                <p>Logout</p>
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        <% } else { %>
         <a id="navbar_login" href="/login">
             <p>Login</p>
             <i class="fas fa-user"></i>
         </a>
-        <a id="navbar_cart" href="/profile/Favs">
-            <p>Cart</p>
-            <i class="fas fa-shopping-cart"></i>
+        <a id="navbar_cart" href="/register">
+            <p>Sign Up</p>
+            <i class="fas fa-sign-in-alt"></i>
         </a>
+        <% }%>
     </nav>
 </header>
