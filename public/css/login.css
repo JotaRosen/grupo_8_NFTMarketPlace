@@ -76,6 +76,12 @@
 
 }
 
+#google-btn{
+    display: flex;  
+    justify-content: center;
+
+}
+
 .submit-button{
     height: 2.5vw;
     color: white;

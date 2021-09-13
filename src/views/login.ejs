@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <%- include('partials/head') %>
+    <meta name="google-signin-client_id" content="<%=process.env.CLIENT_ID%>">
     <body>
         <%- include('partials/header') %>
         <main>
@@ -27,6 +28,34 @@
                             <input type="password" name="password" placeholder="Password" required>
                             <label for="stay-logged" id="session">Keep me logged-in<input type="checkbox" name="stayLogged"></label>    
                             <input class = 'submit-button' type="submit" value="Enviar">
+                            <script src="https://apis.google.com/js/platform.js" async defer></script>
+                            <div href = "#" id = 'google-btn'>
+                                <div class="g-signin2" data-onsuccess="onSignIn"></div>          
+                            </div>
+                            <script>
+                                function onSignIn(googleUser) {
+                                    var id_token = googleUser.getAuthResponse().id_token;
+                                    const url = "http://localhost:3000/login/googleAuth";
+                                    var data = { idToken: id_token };
+                                    fetch(url, {
+                                        headers: {
+                                            "content-type": "application/json"
+                                        },
+                                        body: JSON.stringify(data) ,
+                                        method: "POST"
+                                    }).then(data => { return data.json()}).then(res => {console.log(res)}).catch(err => {console.log(err)});
+                                }
+                             </script>
+                            <a href="#" onclick="signOut();">Sign out</a>
+                            <script>
+                                function signOut() {
+                                    var auth2 = gapi.auth2.getAuthInstance();
+                                    auth2.signOut().then(function () {
+                                    console.log('User signed out.');
+                                });
+                            }
+                            </script>
+
                             <nav class = 'login-help'>
                                 <a   href="/resetPass">Forgot Password?</a>
                                 <a   href="/register">Don't have an account? Sign up</a>

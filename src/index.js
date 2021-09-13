@@ -4,6 +4,8 @@ const methodOverride = require('method-override');
 const cookies = require("cookie-parser");
 const session = require("express-session");
 const cors = require('cors');
+const dotenv = require('dotenv');
+dotenv.config();
 
 
 let port = process.env.PORT || 3000;
@@ -34,7 +36,6 @@ app.use(session({
     saveUninitialized: false
 })); // add req.session
 app.use(require("./middlewares/user")) // save user for views
-//app.use(require("./middlewares/logged")) // save user for views
 //app.use(require("./middlewares/styles")) // save user for views
 
 
