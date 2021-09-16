@@ -1,11 +1,12 @@
 const { body } = require("express-validator");
-const userModel = require("../models/userArtists");
+const db = require("../database/models/index");
+const { User } = db;
 module.exports = [
   body("email").isEmail().custom((value, { req }) => {
     if(value != req.body.emailConfirmed){
         return Promise.reject('E-mails did not match');
     }
-    let registered = userModel.oneByEmail(value);
+    let registered = User.findOne({where:{email: value}});
     if (registered) {
       return Promise.reject('E-mail already exists');
     }

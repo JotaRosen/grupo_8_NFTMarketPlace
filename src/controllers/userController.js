@@ -1,25 +1,40 @@
 //add here user model when ready
-const userArtists = require('../models/userArtists');
-const products = require('../models/product');
+const path = require('path');
+const fs = require('fs');
+const bcrypt = require('bcrypt');
+ 
+const db = require('../database/models/index');
+const {Product, User} = db
+
+
 const { validationResult } = require('express-validator');
 
 
-
 module.exports = {
-    login: (req,res) =>{
-        if(req.session.user){
-            let sessionData = {
-                user: req.session.user,
-                collection: products.allFromOneAuthor(req.session.user.authorId),
-                cardStyle: {
-                    iconStyle: 'edit',
-                    icon: 'pen',
-                    method: 'GET'
-                }
-            };
-            return res.render('profileCollection', sessionData);
+    login: async (req,res) =>{
+        try{
+            if(req.session.user){
+                let user = await User.findOne({
+                    where:{
+                        userId: req.session.user.userId
+                    }});
+                let productsFromUser = await user.getOwned_prods();
+                let sessionData = {
+                    user: req.session.user,
+                    collection: productsFromUser,
+                    cardStyle: {
+                        iconStyle: 'edit',
+                        icon: 'pen',
+                        method: 'GET'
+                    }
+                };
+                return res.render('profileCollection', sessionData);
+            }
+            return res.render('login', {errors: undefined});
+
+        } catch(error){
+            return res.send('Error catched ' + error);
         }
-        return res.render('login', {errors: undefined});
     },
 
 
@@ -27,33 +42,56 @@ module.exports = {
     resetPass: (req,res) => res.render('resetPassword'),
 
 
-    createUser: (req,res) => {
+    createUser: async (req,res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
           return res.render("register",{ errors: errors,title:"Join",old:req.body });
         }else{
-            userArtists.createAccount(req.body);
-          return res.redirect("login");
+            try{
+                await User.create({
+                    name: req.body.name,
+                    email: req.body.email,
+                    username: (req.body.username) ? req.body.username: String(data.email).trim()
+                    .replace(/\s/g, "")
+                    .split("@")[0]
+                    .toLowerCase(),
+                    password: bcrypt.hashSync(req.body.password,10)
+                })
+                return res.redirect("login");
+            }
+            catch(error){
+                return res.send('Error catched ' + error);
+            }
         }
         
       },
 
-    access: (req,res) => {
-    
-        const errors = validationResult(req);
+    access: async (req,res) => {
+        try{
+            const errors = validationResult(req);
         // checks req is a valid req 
 
-        if (!errors.isEmpty()) {
-            //errors is a promise and is being set from loginValidator Middleware
-          return res.render("login",{ errors: errors,title:"Access", old:req.body });
-        }else{
-          let user = userArtists.oneByEmail(req.body.email);
-          if(req.body.stayLogged == 'on'){
-              //setting cookie value, and time duration
-            res.cookie("email",req.body.email,{maxAge:300000})
-          }
-          req.session.user = user;
-          return res.redirect("market")
+            if (!errors.isEmpty()) {
+                //errors is a promise and is being set from loginValidator Middleware
+                console.log(errors)
+                return res.render("login",{ errors: errors,title:"Access", old:req.body });
+            }else{
+                let user = await User.findOne(
+                    {
+                        where:{
+                            email: req.body.email 
+                        }
+                });
+                if(req.body.stayLogged == 'on'){
+                //setting cookie value, and time duration
+                res.cookie("email",req.body.email,{maxAge:300000})
+                }
+            req.session.user = user;
+            return res.redirect("/market")
+            }
+
+        }catch (error){
+            return res.send('Error catched ' + error);
         }
       },
 
@@ -63,73 +101,117 @@ module.exports = {
         return res.redirect("/")
       },
 
-    userProfile: (req,res) =>{ 
-        let userSession = req.session.user
-        //will obtain user id from session, now is harcoded
-        res.render('profileCollection',{
-            user: userSession,
-            collection: products.allFromOneAuthor(userSession.authorId),
-            cardStyle: {
-                iconStyle: 'edit',
-                icon: 'pen',
-                method: 'GET'
-            } 
-    })
+    userProfile: async (req,res) =>{ 
+        try{
+            let actualUser = await User.findOne({
+                where:{
+                    userId: req.session.user.userId
+                }});
+            let productsFromUser = await actualUser.getOwned_prods();
+        
+            return res.render('profileCollection',{
+                user: actualUser,
+                collection: productsFromUser,
+                cardStyle: {
+                    iconStyle: 'edit',
+                    icon: 'pen',
+                    method: 'GET'
+                } 
+        })
+
+        }catch (error) {
+            return res.send('Error catched ' + error);
+        }
     },
     userCreate: (req,res) => res.render('profileCreate'),
 
-    userFavs: (req,res) => {
-        //will obtain user id from session, now is harcoded
+    userFavs: async (req,res) => {
+        try{
+            let user = await User.findByPk(req.session.user.userId);
+            let userLikedNfts = await user.getFavorites();
 
-        res.render('profileFavs', {
-            userLikes: products.filterLikedItems(req.session.user.likedProds),
-            cardStyle: {
-                iconStyle: 'remove',
-                icon: 'trash',
-                method: 'PUT'
-            } 
-        });
+            return res.render('profileFavs', {
+                userLikes: userLikedNfts,
+                cardStyle: {
+                    iconStyle: 'remove',
+                    icon: 'trash',
+                    method: 'PUT'
+                } 
+            });
+
+        } catch (error) {
+            return res.send('Error catched ' + error);
+        }
     },
 
-    userFavsErase: (req,res) => {
-        //will obtain user id from session, now is harcoded
-        let rawItemId = req.params.id
-        let result = userArtists.unlikeAnItem(req.session.user.authorId,rawItemId);
-
-        req.session.user.likedProds = result
-        return res.redirect("/profile/Favs");
-        
-
+    userFavsErase: async (req,res) => {
+        try{
+            let rawItemId = req.params.id;
+            let nftToUnlike = await Product.findByPk(rawItemId);
+            let user = await User.findByPk(req.session.user.userId);
+            await user.removeFavorites(nftToUnlike);
+            return res.redirect("/profile/Favs");
+        }catch (error) {
+            return res.send('Error catched ' + error);
+        }
     },
 
-    userAddtoFavs: (req,res) =>{
+    userAddtoFavs: async (req,res) =>{
         let userSession = req.session.user;
-        let rawItemId = req.params.id;
         if(!userSession){
-            res.redirect('/login');
+            return res.redirect('/login');
         }
 
-        let result = userArtists.likeAnItem(userSession.authorId, rawItemId);
-        req.session.user = result;
-
-        return res.redirect("/productDetail/" + rawItemId);
+        try{
+            let rawItemId = req.params.id;
+            let nftTolike = await Product.findByPk(rawItemId);
+            let user = await User.findByPk(req.session.user.userId);
+            await user.addFavorites(nftTolike);
+            return res.redirect("/profile/Favs");
+        }catch (error) {
+            return res.send('Error catched ' + error);
+        }
+        //return res.redirect("/productDetail/" + rawItemId);
 
     },
-    userEdit: (req,res) => {
-        let rawId = req.params.id;
-        product = products.one(rawId);
-        //hardcoing for mockup purposes. Real data will be incoming from a post http method
-        res.render('itemEdit', {
-            item: products.one(rawId),
-            author: userArtists.one(product.author)
-        })
+    userEdit: async (req,res) => {
+        try{
+            let rawId = req.params.id;
+            let product = await Product.findByPk(rawId, {include: ['Owner']});
+        
+            return res.render('itemEdit', {
+                item: product,
+                author: product.Owner[0]
+            });
+        } catch(error){
+            res.send('Error catched ' + error);
+        }
     },
     userSettings: (req,res) => res.render('profileSettings' , {userArtists: req.session.user}),
 
-    userSettingsEdit: (req,res) =>{
-        let result = userArtists.editUser(req.body,req.file, req.session.user.authorId);
-        req.session.user = result;
-        return res.redirect("/profile")
+    userSettingsEdit: async (req,res) =>{
+        try{
+            let userToBeUpdate = User.findByPk(req.session.user.userId);
+
+            userToBeUpdate.name = (req.body.name) ? req.body.name:userToBeUpdate.name;
+            userToBeUpdate.username = (req.body.username) ? req.body.username:userToBeUpdate.username;
+            userToBeUpdate.description = (req.body.description) ? req.body.description:userToBeUpdate.description;
+
+            if((req.file != undefined) && (userToBeUpdate.profile_pic != null)){
+                let imageToErase = userToBeUpdate.profile_pic;
+                fs.unlinkSync(path.resolve(__dirname,"../../public/img/usersProfile",imageToErase));
+                userToBeUpdate.profile_pic = req.file.filename;
+            }
+
+            await userToBeUpdate.save();
+
+            return res.redirect("/profile");
+
+        }catch(error){
+            res.send('Error catched ' + error);
+        }    
 
     }
+
+    //TODO delete user
 }
