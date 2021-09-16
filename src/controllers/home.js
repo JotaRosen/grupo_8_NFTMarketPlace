@@ -14,10 +14,4 @@ module.exports = {
             return res.send('Error catched:' + error);
         }
     }
-    
-    /*(req,res) => {
-        return User.findAll({
-            include: [Products]
-        }).then(data => res.send(data)).catch( error => res.send(error)); //res.render("home", {products: Products.random()})
-    }*/
 }

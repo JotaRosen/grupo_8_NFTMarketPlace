@@ -39,45 +39,45 @@ module.exports = {
     save: async (req,res) => {
         try{
             let newNft = await Product.create({
-                image: req.body.image,
+                image: req.file.filename,
                 price: req.body.price,
-                pieceName: req.body.pieceName,
+                pieceName: req.body.name,
                 description: req.body.description
             });
             //userId will be obtain from session different from prodId
-            let actualUser = await User.findByPk(req.session.user.id);
+            let actualUser = await User.findByPk(req.session.user.userId);
             await newNft.addOwner(actualUser);
 
             return res.redirect('/profile');
         } catch (error){
-            return res.send(error);
+            return res.send('Error cathced ' + error);
         }
-
-        //return result == true ? res.redirect("/profile") : res.send("Error: could not create item ") 
     },
     update: async (req,res) =>{
         try{
             let productToBeUpdate = await Product.findByPk(req.params.id);
+
             //updating
+
+            console.log(req.body);
+
             let imageToErase = productToBeUpdate.image
-            productToBeUpdate.image = (req.file.filename) ? req.file.filename:productToBeUpdate.image;
-            productToBeUpdate.price = (req.body.price) ? req.body.image:productToBeUpdate.price;
-            productToBeUpdate.pieceName = (req.body.pieceName) ? req.body.description:productToBeUpdate.pieceName;
+            productToBeUpdate.image = (req.create_image) ? req.create_image.filename:productToBeUpdate.image;
+            productToBeUpdate.price = (req.body.price) ? req.body.price:productToBeUpdate.price;
+            productToBeUpdate.pieceName = (req.body.name) ? req.body.name:productToBeUpdate.pieceName;
             productToBeUpdate.description = (req.body.description) ? req.body.description:productToBeUpdate.description;
 
-            if(req.file != undefined){
+            if(req.create_image != undefined){
                 fs.unlinkSync(path.resolve(__dirname,"../../public/tmp/uploads/",imageToErase));
             }
     
 
-            let result = await productToBeUpdate.save();
-            return result ? res.redirect("/profile") : res.send("Error: could not edit item")
+            await productToBeUpdate.save();
+            return res.redirect("/profile");
 
         } catch(error){
             return res.send('Error catched ' + error);
         }
-        /*let result = products.edit(req.body,req.file,req.params.id)
-        return result == true ? res.redirect("/profile") : res.send("Error: could not create item") */
     },
 
     delete: async (req,res) =>{

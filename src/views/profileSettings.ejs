@@ -26,7 +26,7 @@
             <h3>User Settings</h3>
             <form id="create_form" name="create_form" method="POST" enctype="multipart/form-data">
                 <h4 id="form_title">Username</h4>
-                <input type="text" required name="create_title" id="create_title" value = "<%- userArtists.authorUsername %>">
+                <input type="text" required name="name" id="create_title" value = "<%- userArtists.authorUsername %>">
 
                 <h4 id="form_title">Profile avatar</h4>
                 <label id="create_image_label" for="create_image">
@@ -38,7 +38,7 @@
 
                 <h4 id="form_title">Artist bio</h4>
                 <p>Let your buyers know more about the artist</p>
-                <textarea name="create_description" id="create_discription"><%- userArtists.description %></textarea>
+                <textarea name="description" id="create_discription"><%- userArtists.description %></textarea>
                 
                 <button formaction="/profile/settings?_method=PUT" type=submit href="#">Apply  Changes</button>
             </form>

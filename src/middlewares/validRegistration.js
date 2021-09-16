@@ -2,11 +2,11 @@ const { body } = require("express-validator");
 const db = require("../database/models/index");
 const { User } = db;
 module.exports = [
-  body("email").isEmail().custom((value, { req }) => {
+  body("email").isEmail().custom( async (value, { req }) => {
     if(value != req.body.emailConfirmed){
         return Promise.reject('E-mails did not match');
     }
-    let registered = User.findOne({where:{email: value}});
+    let registered = await User.findOne({where:{email: value}});
     if (registered) {
       return Promise.reject('E-mail already exists');
     }

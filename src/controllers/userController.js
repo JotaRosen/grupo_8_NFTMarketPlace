@@ -191,7 +191,7 @@ module.exports = {
 
     userSettingsEdit: async (req,res) =>{
         try{
-            let userToBeUpdate = User.findByPk(req.session.user.userId);
+            let userToBeUpdate = await User.findByPk(req.session.user.userId);
 
             userToBeUpdate.name = (req.body.name) ? req.body.name:userToBeUpdate.name;
             userToBeUpdate.username = (req.body.username) ? req.body.username:userToBeUpdate.username;
