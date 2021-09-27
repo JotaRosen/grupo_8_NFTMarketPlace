@@ -54,7 +54,10 @@ module.exports = {
 
                 return res.redirect('/profile');
             } else {
-                console.log(errors)
+                //should unlink the file that multer upload, because its uploaded anyway
+                let imageToErase = req.file.filename;
+                fs.unlinkSync(path.resolve(__dirname,"../../public/tmp/uploads/",imageToErase));
+                console.log(errors);
                 res.redirect('/profile/Create');
             }
         } catch (error){
@@ -63,25 +66,28 @@ module.exports = {
     },
     update: async (req,res) =>{
         try{
-            let productToBeUpdate = await Product.findByPk(req.params.id);
-
-            //updating
-
-            console.log(req.body);
-
-            let imageToErase = productToBeUpdate.image
-            productToBeUpdate.image = (req.create_image) ? req.create_image.filename:productToBeUpdate.image;
-            productToBeUpdate.price = (req.body.price) ? req.body.price:productToBeUpdate.price;
-            productToBeUpdate.pieceName = (req.body.name) ? req.body.name:productToBeUpdate.pieceName;
-            productToBeUpdate.description = (req.body.description) ? req.body.description:productToBeUpdate.description;
-
-            if(req.create_image != undefined){
-                fs.unlinkSync(path.resolve(__dirname,"../../public/tmp/uploads/",imageToErase));
+            
+            let errors = validationResult(req);
+            if(errors.isEmpty()){
+                let productToBeUpdate = await Product.findByPk(req.params.id);
+                //updatig
+                let imageToErase = productToBeUpdate.image
+                productToBeUpdate.image = (req.create_image) ? req.create_image.filename:productToBeUpdate.image;
+                productToBeUpdate.price = (req.body.price) ? req.body.price:productToBeUpdate.price;
+                productToBeUpdate.pieceName = (req.body.name) ? req.body.name:productToBeUpdate.pieceName;
+                productToBeUpdate.description = (req.body.description) ? req.body.description:productToBeUpdate.description;
+                if(req.create_image != undefined){
+                    fs.unlinkSync(path.resolve(__dirname,"../../public/tmp/uploads/",imageToErase));
+                }
+                await productToBeUpdate.save();
+                return res.redirect("/profile");
             }
-    
-
-            await productToBeUpdate.save();
-            return res.redirect("/profile");
+            else{
+                let imageToErase = req.file.filename;
+                fs.unlinkSync(path.resolve(__dirname,"../../public/tmp/uploads/",imageToErase));
+                console.log(errors);
+                res.redirect('/profile/Create');
+            }
 
         } catch(error){
             return res.send('Error catched ' + error);

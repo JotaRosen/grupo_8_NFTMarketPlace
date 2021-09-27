@@ -212,6 +212,7 @@ module.exports = {
                 return res.redirect("/profile");
 
             }else{
+                //should unlink image if file type was invalid. Such as in product edit/create form
                 console.log(errors);
                 return res.send(errors);
             }

@@ -18,9 +18,9 @@ const upload = multer({storage:dest});
 
 router.get("/market", productsController.index);
 router.get("/productDetail/:id", productsController.productDetail);
-router.post("/profile/Create",[productFormValidator], upload.single("create_image") ,productsController.save);
+router.post("/profile/Create", upload.single("create_image"), productFormValidator ,productsController.save);
 
-router.put('/profile/:id', [productFormValidator] ,upload.single("create_image"),productsController.update); //changing single file name testing purposes
+router.put('/profile/:id',upload.single("create_image") , productFormValidator ,productsController.update); //changing single file name testing purposes
 router.delete('/profile/:id',productsController.delete);
 
 module.exports = router;

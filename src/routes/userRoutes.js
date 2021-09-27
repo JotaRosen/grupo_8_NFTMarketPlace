@@ -6,6 +6,7 @@ const multer = require('multer');
 const isLogged = require("../middlewares/logged");
 const path = require('path');
 const registerValidator = require('../middlewares/validRegistration');
+const userEditSettingValidator = require('../middlewares/userEditSettingValidator');
 
 let destStorage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -33,7 +34,7 @@ router.get('/profile/:id/edit',[isLogged],userController.userEdit);
 
 router.get("/profile/settings", [isLogged],userController.userSettings);
 
-router.put("/profile/settings", [isLogged, registerValidator],upload.single('create_image'), userController.userSettingsEdit);
+router.put("/profile/settings", upload.single('create_image'),[isLogged, userEditSettingValidator], userController.userSettingsEdit);
 
 router.get("/profile/:id/remove", [isLogged] ,userController.userFavsErase)
 
