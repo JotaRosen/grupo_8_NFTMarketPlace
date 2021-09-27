@@ -2,6 +2,7 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models/index');
+const { validationResult } = require('express-validator');
 const {Product, User} = db
 
 module.exports = {
@@ -38,17 +39,24 @@ module.exports = {
     },
     save: async (req,res) => {
         try{
-            let newNft = await Product.create({
-                image: req.file.filename,
-                price: req.body.price,
-                pieceName: req.body.name,
-                description: req.body.description
-            });
-            //userId will be obtain from session different from prodId
-            let actualUser = await User.findByPk(req.session.user.userId);
-            await newNft.addOwner(actualUser);
+            const errors = validationResult(req);
+            if(errors.isEmpty()){
 
-            return res.redirect('/profile');
+                let newNft = await Product.create({
+                    image: req.file.filename,
+                    price: req.body.price,
+                    pieceName: req.body.name,
+                    description: req.body.description
+                });
+                //userId will be obtain from session different from prodId
+                let actualUser = await User.findByPk(req.session.user.userId);
+                await newNft.addOwner(actualUser);
+
+                return res.redirect('/profile');
+            } else {
+                console.log(errors)
+                res.redirect('/profile/Create');
+            }
         } catch (error){
             return res.send('Error cathced ' + error);
         }

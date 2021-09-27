@@ -27,13 +27,13 @@ router.post("/login", loginValidator,userController.access);
 router.post("/register", registerValidator,userController.createUser);
 
 router.get("/profile", [isLogged],userController.userProfile); //profile collection is default
-router.get("/profile/Create", [isLogged],userController.userCreate); //should be a post
+router.get("/profile/Create", [isLogged],userController.userCreate);
 router.get("/profile/Favs", [isLogged],userController.userFavs);
 router.get('/profile/:id/edit',[isLogged],userController.userEdit);
 
 router.get("/profile/settings", [isLogged],userController.userSettings);
 
-router.put("/profile/settings", [isLogged],upload.single('create_image'), userController.userSettingsEdit);
+router.put("/profile/settings", [isLogged, registerValidator],upload.single('create_image'), userController.userSettingsEdit);
 
 router.get("/profile/:id/remove", [isLogged] ,userController.userFavsErase)
 

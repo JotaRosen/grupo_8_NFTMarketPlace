@@ -191,22 +191,30 @@ module.exports = {
 
     userSettingsEdit: async (req,res) =>{
         try{
-            let userToBeUpdate = await User.findByPk(req.session.user.userId);
 
-            userToBeUpdate.name = (req.body.name) ? req.body.name:userToBeUpdate.name;
-            userToBeUpdate.username = (req.body.username) ? req.body.username:userToBeUpdate.username;
-            userToBeUpdate.description = (req.body.description) ? req.body.description:userToBeUpdate.description;
+            const errors  = validationResult(req);
 
-            if((req.file != undefined) && (userToBeUpdate.profile_pic != null)){
-                let imageToErase = userToBeUpdate.profile_pic;
-                fs.unlinkSync(path.resolve(__dirname,"../../public/img/usersProfile",imageToErase));
-                userToBeUpdate.profile_pic = req.file.filename;
+            if(errors.isEmpty()){
+                let userToBeUpdate = await User.findByPk(req.session.user.userId);
+
+                userToBeUpdate.name = (req.body.name) ? req.body.name:userToBeUpdate.name;
+                userToBeUpdate.username = (req.body.username) ? req.body.username:userToBeUpdate.username;
+                userToBeUpdate.description = (req.body.description) ? req.body.description:userToBeUpdate.description;
+
+                if((req.file != undefined) && (userToBeUpdate.profile_pic != null)){
+                    let imageToErase = userToBeUpdate.profile_pic;
+                    fs.unlinkSync(path.resolve(__dirname,"../../public/img/usersProfile",imageToErase));
+                    userToBeUpdate.profile_pic = req.file.filename;
+                }
+
+                await userToBeUpdate.save();
+
+                return res.redirect("/profile");
+
+            }else{
+                console.log(errors);
+                return res.send(errors);
             }
-
-            await userToBeUpdate.save();
-
-            return res.redirect("/profile");
-
         }catch(error){
             res.send('Error catched ' + error);
         }    

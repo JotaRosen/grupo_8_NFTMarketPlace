@@ -12,15 +12,41 @@ module.exports = [
     }
     return true
   }),
-  body("password").isLength({ min: 8 }).custom( (value, { req })  => {
+  body("password").isLength({ min: 8 }).custom( async (value, { req })  => {
     if(value != req.body.passwordConfirmed){
         return Promise.reject('Passwords did not match');
     }
+    regex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
-    /*if(value.search("/[0-9]/") == -1){
-      return Promise.reject('Invalid password. must contain at least one number');
-    } */ //TODO
+    if(!regex.test(value)){
+      return Promise.reject('password must contain at least one special charcter, number & caps');
+    }
 
     return true
-  })
+  }),
+
+  body("name").isLength({ min: 4}).custom( async (value, { req }) => {
+    // A name should only have alphabet chars
+    // handling special chars is hard because of names likes o'brian
+    if (/\d+/.test(value)){
+      return Promise.reject("Real name shouldn't contain numbers");
+    } 
+    return true
+
+  })/*,
+  body('create_image').custom( async (value) => {
+    let fileExtension = value.split('.').pop().toUpperCase();
+
+    console.log(value);
+
+    let extensionArray = ['JPG', 'JPEG', 'PNG', 'GIF','JFIF'] 
+
+    let found = extensionArray.find( element => element == fileExtension);
+
+    if(found == undefined){
+        return Promise.reject('Invalid file type')
+    }
+
+    return true;
+})*/
 ]

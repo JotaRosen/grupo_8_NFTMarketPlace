@@ -34,7 +34,7 @@ app.use(session({
     saveUninitialized: false
 })); // add req.session
 app.use(require("./middlewares/user")) // save user for views
-//app.use(require("./middlewares/logged")) // save user for views
+//app.use(require("./middlewares/productCreateValidator")) // save user for views
 //app.use(require("./middlewares/styles")) // save user for views
 
 
