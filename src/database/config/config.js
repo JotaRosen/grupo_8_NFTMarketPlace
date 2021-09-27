@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": 'rootpassword', //just for mac connection  TODO:changes this
+    "password": null, //just for mac connection  TODO:changes this
     "database": "NewFuTure",
     "host": "127.0.0.1",
     "dialect": "mysql"
