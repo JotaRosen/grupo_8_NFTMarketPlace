@@ -190,6 +190,17 @@ color: #6D07E6;
     background-color: #5c0ebb;
 }
 
+h6{
+    width: 100%;
+    font-size: 0.75rem;
+    color: crimson;
+}
+
+.formError{
+    border: 3px solid crimson;
+    background-color: rgba(220, 20, 60, 0.233);
+}
+
 @media (min-width: 760px){
 
     #profile_menu_links{

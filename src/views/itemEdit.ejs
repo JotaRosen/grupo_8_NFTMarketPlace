@@ -25,9 +25,14 @@
                 <label id="create_image_label" for="create_image">
                    <img src="../../public/tmp/uploads/<%- item.image %>">
                 </label>
+
+                <h6 class="fileErrors"></h6>
                 <input type="file"  name="create_image" id="create_image" multiple>
+                
                 <p id="form_title">Name *</p>
+                <h6 class="nameErrors"></h6>
                 <input type="text" required name="name" id="create_title" value = "<%- item.pieceName %>">
+                
                 <p id="form_title">Description</p>
                 <textarea name="description" id="create_discription" placeholder="Describe your item (optional)"></textarea>
                 <p id="form_title">Price</p>
@@ -40,6 +45,7 @@
         </section>
     </main>
     <%- include('partials/footer') %>
+    <script src="/public/scripts/itemEditValidation.js"></script>
 </body>
 
 </html>

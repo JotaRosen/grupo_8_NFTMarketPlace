@@ -31,9 +31,14 @@
                     <p>Drag and drop file</p>
                     <p id="label_line">or click to browse from your computer</p>
                 </label>
-                <input type="file"  name="create_image" id="create_image" multiple>
-                <p id="form_title">Name *</p>
+
+                <h6 class="fileErrors"></h6>
+                <input type="file"  accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" name="create_image" id="create_image" multiple required>
+                
+                <p id="form_title">Piece name *</p>
+                <h6 class="nameErrors"></h6>
                 <input type="text" required name="name" id="create_title" placeholder="Item name">
+                
                 <p id="form_title">Description</p>
                 <textarea name="description" id="create_discription" placeholder="Describe your item (optional)"></textarea>
                 <p id="form_title">Price</p>
@@ -43,6 +48,7 @@
         </section>
     </main>
     <%- include('partials/footer') %>
+    <script src="/public/scripts/productValidation.js"></script>
 </body>
 
 </html>

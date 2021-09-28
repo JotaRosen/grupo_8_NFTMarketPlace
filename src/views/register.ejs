@@ -21,13 +21,26 @@
                     </article>
                     <% } %>
                     <article class = "login-containers">
-                        <form action="/register" method="POST">
-                            <input type="text" name="email" placeholder="Email Address*" required>
-                            <input type="text" name="emailConfirmed" placeholder="Confirm Email Address*" required>
-                            <input type="text" name="username" placeholder="Username*" required>
+                        <form action="/register" method="POST" name="register" id="registerForm">
+                            
+                            <input type="text" name="email" placeholder="Email Address*" class="emailInput" required>
+                            <h6 class="emailErrors"></h6>
+
+                            <input type="text" name="emailConfirmed" placeholder="Confirm Email Address*" class="repeatEmailInput" required>
+                            <h6 class="email2Errors"></h6>
+
+
+                            <input type="text" name="username" placeholder="Username*" class="usernameInput" required>
+                            <h6 class="usernameErrors"></h6>
+
                             <input type="text" name="name" placeholder="Your Name*" required>
-                            <input type="password" name="password" placeholder="Password*" required>
-                            <input type="password" name="passwordConfirmed" placeholder="Confirm Password*" required>
+                            
+                            <input type="password" name="password" placeholder="Password*" class="passwordInput" required>
+                            <h6 class="passwordErrors"></h6>
+
+                            <input type="password" name="passwordConfirmed" placeholder="Confirm Password*" class="repeatPassInput" required>
+                            <h6 class="password2Errors"></h6>
+
                             <p id = 'password-helper'>Password must be at least 8 characters and contain 1 number</p>
                             <input type="checkbox" name="stayTunnedBox" id="stay-tunned-container">
                             <label for="stay-tunned-container" id = 'stay-tunned-text'>Stay up to date with New FuTure</label>
@@ -42,5 +55,6 @@
                 </article>
             </section>
         </main>
+        <script src="/public/scripts/registerValidation.js"></script>
     </body>
 </html>

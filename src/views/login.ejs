@@ -22,9 +22,13 @@
                         </article>
                         <% }%>
                     <article class = "login-containers">
-                        <form action="/login" method="POST">
-                            <input type="text" name="email" placeholder="Email Address or Username" required>
+                        <form action="/login" method="POST" name="login" id="loginForm">
+
+                            <input type="text" name="email" placeholder="Email Address or Username" class="emailInput" required>
+                            <h6 class="emailErrors"></h6>
+
                             <input type="password" name="password" placeholder="Password" required>
+
                             <label for="stay-logged" id="session">Keep me logged-in<input type="checkbox" name="stayLogged"></label>    
                             <input class = 'submit-button' type="submit" value="Enviar">
                             <nav class = 'login-help'>
@@ -36,5 +40,7 @@
                 </article>
             </section>
         </main>
+        <script src="/public/scripts/loginValidation.js"></script>
     </body>
+
 </html>
